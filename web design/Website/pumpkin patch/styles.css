@@ -107,14 +107,17 @@ button, a {
 
 /* "Who We are" layout */
 .bdImg {
-    margin-bottom: 25px;
-    box-shadow: 20px 25px 30px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin-bottom: 50px;
+    box-shadow: 20px 25px 25px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
 }
 
-.bodyView {
+/* .bodyView {
     height: 50vh;
-}
+} */
 
 canvas {
     width: 50px;
@@ -144,4 +147,68 @@ canvas {
 
 .btn-scale:hover {
     transform: scale(1.05,1.05);
+}
+
+/* animations */
+.fadeIn {
+    opacity: 0;
+    scale: 0.8;
+    filter: blur(0.4em);
+    translate: -50px 0px;
+    transition: all 1s;
+}
+.fadeRight {
+    opacity: 0;
+    scale: 0.8;
+    filter: blur(0.4em);
+    translate: -500px 0px;
+    transition: all 1s;
+}
+.fadeLeft {
+    opacity: 0;
+    scale: 0.8;
+    filter: blur(0.4em);
+    translate: 500px 0px;
+    transition: all 1s;
+}
+.inFade {
+    opacity: 1;
+    scale: 1;
+    filter: blur(0em);
+    translate: 0px 0px;
+}
+
+.pointAnimation {
+    animation: point 2s ease-in-out infinite normal;
+}
+@keyframes point {
+    0% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+.pointAnimationUp {
+    animation: pointUp 1.5s linear infinite normal;
+}
+@keyframes pointUp {
+    0% {
+        transform: translateY(0px);
+    }
+    25% {
+        transform: translateY(5px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    75% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
