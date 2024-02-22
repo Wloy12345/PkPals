@@ -1,0 +1,899 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="PKPalsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'PKPals.dbo.CATEGORY' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="CATEGORY">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="CategoryID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'PKPals.dbo.CROP' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="CROP">
+          <Key>
+            <PropertyRef Name="CropID" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Description" />
+            <PropertyRef Name="Type" />
+            <PropertyRef Name="DaysTillHarvest" />
+            <PropertyRef Name="Season" />
+            <PropertyRef Name="SelfLife" />
+            <PropertyRef Name="MarketValue" />
+            <PropertyRef Name="WaterAmount" />
+            <PropertyRef Name="CropRotationRecom" />
+            <PropertyRef Name="HarvestTechniques" />
+          </Key>
+          <Property Name="CropID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="Type" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="DaysTillHarvest" Type="int" Nullable="false" />
+          <Property Name="Season" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="SelfLife" Type="int" Nullable="false" />
+          <Property Name="MarketValue" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="WaterAmount" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="CropRotationRecom" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="HarvestTechniques" Type="varchar" MaxLength="250" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'PKPals.dbo.CROP_WATER_STATUS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="CROP_WATER_STATUS">
+          <Key>
+            <PropertyRef Name="CropWaterStatusID" />
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="CropWaterStatusID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'PKPals.dbo.CUSTOMER' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="CUSTOMER">
+          <Key>
+            <PropertyRef Name="CustomerID" />
+            <PropertyRef Name="FirstName" />
+            <PropertyRef Name="LastName" />
+            <PropertyRef Name="Email" />
+            <PropertyRef Name="Phone" />
+          </Key>
+          <Property Name="CustomerID" Type="int" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Phone" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'PKPals.dbo.CUSTOMERROSTER' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="CUSTOMERROSTER">
+          <Key>
+            <PropertyRef Name="CustomerRosterID" />
+            <PropertyRef Name="CustomerID" />
+            <PropertyRef Name="FarmID" />
+          </Key>
+          <Property Name="CustomerRosterID" Type="int" Nullable="false" />
+          <Property Name="CustomerID" Type="int" Nullable="false" />
+          <Property Name="FarmID" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'PKPals.dbo.EMPLOYEE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="EMPLOYEE">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+            <PropertyRef Name="PositionID" />
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="FirstName" />
+            <PropertyRef Name="LastName" />
+            <PropertyRef Name="Certifications" />
+            <PropertyRef Name="Allergies" />
+          </Key>
+          <Property Name="EmployeeID" Type="int" Nullable="false" />
+          <Property Name="PositionID" Type="int" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="DateofBirth" Type="date" />
+          <Property Name="Certifications" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="Allergies" Type="varchar" MaxLength="250" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'PKPals.dbo.EQUIPMENT' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="EQUIPMENT">
+          <Key>
+            <PropertyRef Name="EquipmentID" />
+            <PropertyRef Name="FarmID" />
+            <PropertyRef Name="StatusID" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Type" />
+            <PropertyRef Name="Description" />
+          </Key>
+          <Property Name="EquipmentID" Type="int" Nullable="false" />
+          <Property Name="FarmID" Type="int" Nullable="false" />
+          <Property Name="StatusID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Type" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="250" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'PKPals.dbo.FARM' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="FARM">
+          <Key>
+            <PropertyRef Name="FarmID" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Size" />
+            <PropertyRef Name="Address" />
+            <PropertyRef Name="State" />
+            <PropertyRef Name="City" />
+            <PropertyRef Name="ZipCode" />
+          </Key>
+          <Property Name="FarmID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Size" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Address" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="State" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="City" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ZipCode" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'PKPals.dbo.INVENTORY' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="INVENTORY">
+          <Key>
+            <PropertyRef Name="InventoryID" />
+            <PropertyRef Name="FarmID" />
+            <PropertyRef Name="SuppliesID" />
+            <PropertyRef Name="Quantity" />
+          </Key>
+          <Property Name="InventoryID" Type="int" Nullable="false" />
+          <Property Name="FarmID" Type="int" Nullable="false" />
+          <Property Name="SuppliesID" Type="int" Nullable="false" />
+          <Property Name="Quantity" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'PKPals.dbo.PLOT' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="PLOT">
+          <Key>
+            <PropertyRef Name="PlotID" />
+            <PropertyRef Name="FarmID" />
+            <PropertyRef Name="CropID" />
+            <PropertyRef Name="CropWaterStatusID" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Description" />
+            <PropertyRef Name="Size" />
+            <PropertyRef Name="History" />
+            <PropertyRef Name="DatePlantec" />
+          </Key>
+          <Property Name="PlotID" Type="int" Nullable="false" />
+          <Property Name="FarmID" Type="int" Nullable="false" />
+          <Property Name="CropID" Type="int" Nullable="false" />
+          <Property Name="CropWaterStatusID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="Size" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="History" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="DatePlantec" Type="datetime" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'PKPals.dbo.ROLE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="ROLE">
+          <Key>
+            <PropertyRef Name="RoleID" />
+            <PropertyRef Name="Type" />
+          </Key>
+          <Property Name="RoleID" Type="int" Nullable="false" />
+          <Property Name="Type" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'PKPals.dbo.SCHEDULE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="SCHEDULE">
+          <Key>
+            <PropertyRef Name="ScheduleID" />
+            <PropertyRef Name="EmployeeID" />
+            <PropertyRef Name="EquipmentID" />
+            <PropertyRef Name="Time" />
+            <PropertyRef Name="IsApproved" />
+          </Key>
+          <Property Name="ScheduleID" Type="int" Nullable="false" />
+          <Property Name="EmployeeID" Type="int" Nullable="false" />
+          <Property Name="EquipmentID" Type="int" Nullable="false" />
+          <Property Name="Time" Type="datetime" Nullable="false" />
+          <Property Name="IsApproved" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'PKPals.dbo.STATUS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="STATUS">
+          <Key>
+            <PropertyRef Name="StatusID" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Description" />
+          </Key>
+          <Property Name="StatusID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="250" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'PKPals.dbo.SUPPLIES' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="SUPPLIES">
+          <Key>
+            <PropertyRef Name="SuppliesID" />
+            <PropertyRef Name="CategoryID" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Type" />
+            <PropertyRef Name="Description" />
+            <PropertyRef Name="Unit" />
+          </Key>
+          <Property Name="SuppliesID" Type="int" Nullable="false" />
+          <Property Name="CategoryID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Type" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="Unit" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'PKPals.dbo.USER' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="USER">
+          <Key>
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="Email" />
+            <PropertyRef Name="Password" />
+            <PropertyRef Name="Username" />
+            <PropertyRef Name="PhoneNumber" />
+          </Key>
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Username" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="PhoneNumber" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'PKPals.dbo.USER_POSITION' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="USER_POSITION">
+          <Key>
+            <PropertyRef Name="PositionID" />
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="PositionID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'PKPals.dbo.USERROLE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="USERROLE">
+          <Key>
+            <PropertyRef Name="UserRoleID" />
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="UserRoleID" Type="int" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="RoleID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="PKPalsModelStoreContainer">
+          <EntitySet Name="CATEGORY" EntityType="Self.CATEGORY" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [CATEGORY].[CategoryID] AS [CategoryID], 
+    [CATEGORY].[Name] AS [Name]
+    FROM [dbo].[CATEGORY] AS [CATEGORY]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="CROP" EntityType="Self.CROP" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [CROP].[CropID] AS [CropID], 
+    [CROP].[Name] AS [Name], 
+    [CROP].[Description] AS [Description], 
+    [CROP].[Type] AS [Type], 
+    [CROP].[DaysTillHarvest] AS [DaysTillHarvest], 
+    [CROP].[Season] AS [Season], 
+    [CROP].[SelfLife] AS [SelfLife], 
+    [CROP].[MarketValue] AS [MarketValue], 
+    [CROP].[WaterAmount] AS [WaterAmount], 
+    [CROP].[CropRotationRecom] AS [CropRotationRecom], 
+    [CROP].[HarvestTechniques] AS [HarvestTechniques]
+    FROM [dbo].[CROP] AS [CROP]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="CROP_WATER_STATUS" EntityType="Self.CROP_WATER_STATUS" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [CROP_WATER_STATUS].[CropWaterStatusID] AS [CropWaterStatusID], 
+    [CROP_WATER_STATUS].[Name] AS [Name]
+    FROM [dbo].[CROP_WATER_STATUS] AS [CROP_WATER_STATUS]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="CUSTOMER" EntityType="Self.CUSTOMER" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [CUSTOMER].[CustomerID] AS [CustomerID], 
+    [CUSTOMER].[FirstName] AS [FirstName], 
+    [CUSTOMER].[LastName] AS [LastName], 
+    [CUSTOMER].[Email] AS [Email], 
+    [CUSTOMER].[Phone] AS [Phone]
+    FROM [dbo].[CUSTOMER] AS [CUSTOMER]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="CUSTOMERROSTER" EntityType="Self.CUSTOMERROSTER" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [CUSTOMERROSTER].[CustomerRosterID] AS [CustomerRosterID], 
+    [CUSTOMERROSTER].[CustomerID] AS [CustomerID], 
+    [CUSTOMERROSTER].[FarmID] AS [FarmID]
+    FROM [dbo].[CUSTOMERROSTER] AS [CUSTOMERROSTER]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="EMPLOYEE" EntityType="Self.EMPLOYEE" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [EMPLOYEE].[EmployeeID] AS [EmployeeID], 
+    [EMPLOYEE].[PositionID] AS [PositionID], 
+    [EMPLOYEE].[UserID] AS [UserID], 
+    [EMPLOYEE].[FirstName] AS [FirstName], 
+    [EMPLOYEE].[LastName] AS [LastName], 
+    [EMPLOYEE].[DateofBirth] AS [DateofBirth], 
+    [EMPLOYEE].[Certifications] AS [Certifications], 
+    [EMPLOYEE].[Allergies] AS [Allergies]
+    FROM [dbo].[EMPLOYEE] AS [EMPLOYEE]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="EQUIPMENT" EntityType="Self.EQUIPMENT" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [EQUIPMENT].[EquipmentID] AS [EquipmentID], 
+    [EQUIPMENT].[FarmID] AS [FarmID], 
+    [EQUIPMENT].[StatusID] AS [StatusID], 
+    [EQUIPMENT].[Name] AS [Name], 
+    [EQUIPMENT].[Type] AS [Type], 
+    [EQUIPMENT].[Description] AS [Description]
+    FROM [dbo].[EQUIPMENT] AS [EQUIPMENT]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="FARM" EntityType="Self.FARM" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [FARM].[FarmID] AS [FarmID], 
+    [FARM].[Name] AS [Name], 
+    [FARM].[Size] AS [Size], 
+    [FARM].[Address] AS [Address], 
+    [FARM].[State] AS [State], 
+    [FARM].[City] AS [City], 
+    [FARM].[ZipCode] AS [ZipCode]
+    FROM [dbo].[FARM] AS [FARM]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="INVENTORY" EntityType="Self.INVENTORY" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [INVENTORY].[InventoryID] AS [InventoryID], 
+    [INVENTORY].[FarmID] AS [FarmID], 
+    [INVENTORY].[SuppliesID] AS [SuppliesID], 
+    [INVENTORY].[Quantity] AS [Quantity]
+    FROM [dbo].[INVENTORY] AS [INVENTORY]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="PLOT" EntityType="Self.PLOT" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [PLOT].[PlotID] AS [PlotID], 
+    [PLOT].[FarmID] AS [FarmID], 
+    [PLOT].[CropID] AS [CropID], 
+    [PLOT].[CropWaterStatusID] AS [CropWaterStatusID], 
+    [PLOT].[Name] AS [Name], 
+    [PLOT].[Description] AS [Description], 
+    [PLOT].[Size] AS [Size], 
+    [PLOT].[History] AS [History], 
+    [PLOT].[DatePlantec] AS [DatePlantec]
+    FROM [dbo].[PLOT] AS [PLOT]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ROLE" EntityType="Self.ROLE" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ROLE].[RoleID] AS [RoleID], 
+    [ROLE].[Type] AS [Type]
+    FROM [dbo].[ROLE] AS [ROLE]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SCHEDULE" EntityType="Self.SCHEDULE" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [SCHEDULE].[ScheduleID] AS [ScheduleID], 
+    [SCHEDULE].[EmployeeID] AS [EmployeeID], 
+    [SCHEDULE].[EquipmentID] AS [EquipmentID], 
+    [SCHEDULE].[Time] AS [Time], 
+    [SCHEDULE].[IsApproved] AS [IsApproved]
+    FROM [dbo].[SCHEDULE] AS [SCHEDULE]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="STATUS" EntityType="Self.STATUS" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [STATUS].[StatusID] AS [StatusID], 
+    [STATUS].[Name] AS [Name], 
+    [STATUS].[Description] AS [Description]
+    FROM [dbo].[STATUS] AS [STATUS]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SUPPLIES" EntityType="Self.SUPPLIES" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [SUPPLIES].[SuppliesID] AS [SuppliesID], 
+    [SUPPLIES].[CategoryID] AS [CategoryID], 
+    [SUPPLIES].[Name] AS [Name], 
+    [SUPPLIES].[Type] AS [Type], 
+    [SUPPLIES].[Description] AS [Description], 
+    [SUPPLIES].[Unit] AS [Unit]
+    FROM [dbo].[SUPPLIES] AS [SUPPLIES]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="USER" EntityType="Self.USER" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [USER].[UserID] AS [UserID], 
+    [USER].[Email] AS [Email], 
+    [USER].[Password] AS [Password], 
+    [USER].[Username] AS [Username], 
+    [USER].[PhoneNumber] AS [PhoneNumber]
+    FROM [dbo].[USER] AS [USER]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="USER_POSITION" EntityType="Self.USER_POSITION" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [USER_POSITION].[PositionID] AS [PositionID], 
+    [USER_POSITION].[Name] AS [Name]
+    FROM [dbo].[USER_POSITION] AS [USER_POSITION]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="USERROLE" EntityType="Self.USERROLE" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [USERROLE].[UserRoleID] AS [UserRoleID], 
+    [USERROLE].[UserID] AS [UserID], 
+    [USERROLE].[RoleID] AS [RoleID]
+    FROM [dbo].[USERROLE] AS [USERROLE]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PKPalsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CATEGORY">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="CategoryID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CROP">
+          <Key>
+            <PropertyRef Name="CropID" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Description" />
+            <PropertyRef Name="Type" />
+            <PropertyRef Name="DaysTillHarvest" />
+            <PropertyRef Name="Season" />
+            <PropertyRef Name="SelfLife" />
+            <PropertyRef Name="MarketValue" />
+            <PropertyRef Name="WaterAmount" />
+            <PropertyRef Name="CropRotationRecom" />
+            <PropertyRef Name="HarvestTechniques" />
+          </Key>
+          <Property Name="CropID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DaysTillHarvest" Type="Int32" Nullable="false" />
+          <Property Name="Season" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SelfLife" Type="Int32" Nullable="false" />
+          <Property Name="MarketValue" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="WaterAmount" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CropRotationRecom" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HarvestTechniques" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CROP_WATER_STATUS">
+          <Key>
+            <PropertyRef Name="CropWaterStatusID" />
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="CropWaterStatusID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CUSTOMER">
+          <Key>
+            <PropertyRef Name="CustomerID" />
+            <PropertyRef Name="FirstName" />
+            <PropertyRef Name="LastName" />
+            <PropertyRef Name="Email" />
+            <PropertyRef Name="Phone" />
+          </Key>
+          <Property Name="CustomerID" Type="Int32" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CUSTOMERROSTER">
+          <Key>
+            <PropertyRef Name="CustomerRosterID" />
+            <PropertyRef Name="CustomerID" />
+            <PropertyRef Name="FarmID" />
+          </Key>
+          <Property Name="CustomerRosterID" Type="Int32" Nullable="false" />
+          <Property Name="CustomerID" Type="Int32" Nullable="false" />
+          <Property Name="FarmID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EMPLOYEE">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+            <PropertyRef Name="PositionID" />
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="FirstName" />
+            <PropertyRef Name="LastName" />
+            <PropertyRef Name="Certifications" />
+            <PropertyRef Name="Allergies" />
+          </Key>
+          <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+          <Property Name="PositionID" Type="Int32" Nullable="false" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DateofBirth" Type="DateTime" Precision="0" />
+          <Property Name="Certifications" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Allergies" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EQUIPMENT">
+          <Key>
+            <PropertyRef Name="EquipmentID" />
+            <PropertyRef Name="FarmID" />
+            <PropertyRef Name="StatusID" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Type" />
+            <PropertyRef Name="Description" />
+          </Key>
+          <Property Name="EquipmentID" Type="Int32" Nullable="false" />
+          <Property Name="FarmID" Type="Int32" Nullable="false" />
+          <Property Name="StatusID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FARM">
+          <Key>
+            <PropertyRef Name="FarmID" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Size" />
+            <PropertyRef Name="Address" />
+            <PropertyRef Name="State" />
+            <PropertyRef Name="City" />
+            <PropertyRef Name="ZipCode" />
+          </Key>
+          <Property Name="FarmID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Size" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="State" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ZipCode" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="INVENTORY">
+          <Key>
+            <PropertyRef Name="InventoryID" />
+            <PropertyRef Name="FarmID" />
+            <PropertyRef Name="SuppliesID" />
+            <PropertyRef Name="Quantity" />
+          </Key>
+          <Property Name="InventoryID" Type="Int32" Nullable="false" />
+          <Property Name="FarmID" Type="Int32" Nullable="false" />
+          <Property Name="SuppliesID" Type="Int32" Nullable="false" />
+          <Property Name="Quantity" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PLOT">
+          <Key>
+            <PropertyRef Name="PlotID" />
+            <PropertyRef Name="FarmID" />
+            <PropertyRef Name="CropID" />
+            <PropertyRef Name="CropWaterStatusID" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Description" />
+            <PropertyRef Name="Size" />
+            <PropertyRef Name="History" />
+            <PropertyRef Name="DatePlantec" />
+          </Key>
+          <Property Name="PlotID" Type="Int32" Nullable="false" />
+          <Property Name="FarmID" Type="Int32" Nullable="false" />
+          <Property Name="CropID" Type="Int32" Nullable="false" />
+          <Property Name="CropWaterStatusID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Size" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="History" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DatePlantec" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="ROLE">
+          <Key>
+            <PropertyRef Name="RoleID" />
+            <PropertyRef Name="Type" />
+          </Key>
+          <Property Name="RoleID" Type="Int32" Nullable="false" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SCHEDULE">
+          <Key>
+            <PropertyRef Name="ScheduleID" />
+            <PropertyRef Name="EmployeeID" />
+            <PropertyRef Name="EquipmentID" />
+            <PropertyRef Name="Time" />
+            <PropertyRef Name="IsApproved" />
+          </Key>
+          <Property Name="ScheduleID" Type="Int32" Nullable="false" />
+          <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+          <Property Name="EquipmentID" Type="Int32" Nullable="false" />
+          <Property Name="Time" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IsApproved" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="STATUS">
+          <Key>
+            <PropertyRef Name="StatusID" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Description" />
+          </Key>
+          <Property Name="StatusID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SUPPLy">
+          <Key>
+            <PropertyRef Name="SuppliesID" />
+            <PropertyRef Name="CategoryID" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Type" />
+            <PropertyRef Name="Description" />
+            <PropertyRef Name="Unit" />
+          </Key>
+          <Property Name="SuppliesID" Type="Int32" Nullable="false" />
+          <Property Name="CategoryID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="USER">
+          <Key>
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="Email" />
+            <PropertyRef Name="Password" />
+            <PropertyRef Name="Username" />
+            <PropertyRef Name="PhoneNumber" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="USER_POSITION">
+          <Key>
+            <PropertyRef Name="PositionID" />
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="PositionID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="USERROLE">
+          <Key>
+            <PropertyRef Name="UserRoleID" />
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="UserRoleID" Type="Int32" Nullable="false" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="RoleID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="PKEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CATEGORies" EntityType="Self.CATEGORY" />
+          <EntitySet Name="CROPs" EntityType="Self.CROP" />
+          <EntitySet Name="CROP_WATER_STATUS" EntityType="Self.CROP_WATER_STATUS" />
+          <EntitySet Name="CUSTOMERs" EntityType="Self.CUSTOMER" />
+          <EntitySet Name="CUSTOMERROSTERs" EntityType="Self.CUSTOMERROSTER" />
+          <EntitySet Name="EMPLOYEEs" EntityType="Self.EMPLOYEE" />
+          <EntitySet Name="EQUIPMENTs" EntityType="Self.EQUIPMENT" />
+          <EntitySet Name="FARMs" EntityType="Self.FARM" />
+          <EntitySet Name="INVENTORies" EntityType="Self.INVENTORY" />
+          <EntitySet Name="PLOTs" EntityType="Self.PLOT" />
+          <EntitySet Name="ROLEs" EntityType="Self.ROLE" />
+          <EntitySet Name="SCHEDULEs" EntityType="Self.SCHEDULE" />
+          <EntitySet Name="STATUS" EntityType="Self.STATUS" />
+          <EntitySet Name="SUPPLIES" EntityType="Self.SUPPLy" />
+          <EntitySet Name="USERs" EntityType="Self.USER" />
+          <EntitySet Name="USER_POSITION" EntityType="Self.USER_POSITION" />
+          <EntitySet Name="USERROLEs" EntityType="Self.USERROLE" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PKPalsModelStoreContainer" CdmEntityContainer="PKEntities">
+          <EntitySetMapping Name="CATEGORies">
+            <EntityTypeMapping TypeName="PKPalsModel.CATEGORY">
+              <MappingFragment StoreEntitySet="CATEGORY">
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CROPs">
+            <EntityTypeMapping TypeName="PKPalsModel.CROP">
+              <MappingFragment StoreEntitySet="CROP">
+                <ScalarProperty Name="CropID" ColumnName="CropID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="DaysTillHarvest" ColumnName="DaysTillHarvest" />
+                <ScalarProperty Name="Season" ColumnName="Season" />
+                <ScalarProperty Name="SelfLife" ColumnName="SelfLife" />
+                <ScalarProperty Name="MarketValue" ColumnName="MarketValue" />
+                <ScalarProperty Name="WaterAmount" ColumnName="WaterAmount" />
+                <ScalarProperty Name="CropRotationRecom" ColumnName="CropRotationRecom" />
+                <ScalarProperty Name="HarvestTechniques" ColumnName="HarvestTechniques" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CROP_WATER_STATUS">
+            <EntityTypeMapping TypeName="PKPalsModel.CROP_WATER_STATUS">
+              <MappingFragment StoreEntitySet="CROP_WATER_STATUS">
+                <ScalarProperty Name="CropWaterStatusID" ColumnName="CropWaterStatusID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CUSTOMERs">
+            <EntityTypeMapping TypeName="PKPalsModel.CUSTOMER">
+              <MappingFragment StoreEntitySet="CUSTOMER">
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CUSTOMERROSTERs">
+            <EntityTypeMapping TypeName="PKPalsModel.CUSTOMERROSTER">
+              <MappingFragment StoreEntitySet="CUSTOMERROSTER">
+                <ScalarProperty Name="CustomerRosterID" ColumnName="CustomerRosterID" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="FarmID" ColumnName="FarmID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EMPLOYEEs">
+            <EntityTypeMapping TypeName="PKPalsModel.EMPLOYEE">
+              <MappingFragment StoreEntitySet="EMPLOYEE">
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="PositionID" ColumnName="PositionID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="DateofBirth" ColumnName="DateofBirth" />
+                <ScalarProperty Name="Certifications" ColumnName="Certifications" />
+                <ScalarProperty Name="Allergies" ColumnName="Allergies" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EQUIPMENTs">
+            <EntityTypeMapping TypeName="PKPalsModel.EQUIPMENT">
+              <MappingFragment StoreEntitySet="EQUIPMENT">
+                <ScalarProperty Name="EquipmentID" ColumnName="EquipmentID" />
+                <ScalarProperty Name="FarmID" ColumnName="FarmID" />
+                <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FARMs">
+            <EntityTypeMapping TypeName="PKPalsModel.FARM">
+              <MappingFragment StoreEntitySet="FARM">
+                <ScalarProperty Name="FarmID" ColumnName="FarmID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Size" ColumnName="Size" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="INVENTORies">
+            <EntityTypeMapping TypeName="PKPalsModel.INVENTORY">
+              <MappingFragment StoreEntitySet="INVENTORY">
+                <ScalarProperty Name="InventoryID" ColumnName="InventoryID" />
+                <ScalarProperty Name="FarmID" ColumnName="FarmID" />
+                <ScalarProperty Name="SuppliesID" ColumnName="SuppliesID" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PLOTs">
+            <EntityTypeMapping TypeName="PKPalsModel.PLOT">
+              <MappingFragment StoreEntitySet="PLOT">
+                <ScalarProperty Name="PlotID" ColumnName="PlotID" />
+                <ScalarProperty Name="FarmID" ColumnName="FarmID" />
+                <ScalarProperty Name="CropID" ColumnName="CropID" />
+                <ScalarProperty Name="CropWaterStatusID" ColumnName="CropWaterStatusID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Size" ColumnName="Size" />
+                <ScalarProperty Name="History" ColumnName="History" />
+                <ScalarProperty Name="DatePlantec" ColumnName="DatePlantec" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ROLEs">
+            <EntityTypeMapping TypeName="PKPalsModel.ROLE">
+              <MappingFragment StoreEntitySet="ROLE">
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SCHEDULEs">
+            <EntityTypeMapping TypeName="PKPalsModel.SCHEDULE">
+              <MappingFragment StoreEntitySet="SCHEDULE">
+                <ScalarProperty Name="ScheduleID" ColumnName="ScheduleID" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="EquipmentID" ColumnName="EquipmentID" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="STATUS">
+            <EntityTypeMapping TypeName="PKPalsModel.STATUS">
+              <MappingFragment StoreEntitySet="STATUS">
+                <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SUPPLIES">
+            <EntityTypeMapping TypeName="PKPalsModel.SUPPLy">
+              <MappingFragment StoreEntitySet="SUPPLIES">
+                <ScalarProperty Name="SuppliesID" ColumnName="SuppliesID" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USERs">
+            <EntityTypeMapping TypeName="PKPalsModel.USER">
+              <MappingFragment StoreEntitySet="USER">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USER_POSITION">
+            <EntityTypeMapping TypeName="PKPalsModel.USER_POSITION">
+              <MappingFragment StoreEntitySet="USER_POSITION">
+                <ScalarProperty Name="PositionID" ColumnName="PositionID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USERROLEs">
+            <EntityTypeMapping TypeName="PKPalsModel.USERROLE">
+              <MappingFragment StoreEntitySet="USERROLE">
+                <ScalarProperty Name="UserRoleID" ColumnName="UserRoleID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

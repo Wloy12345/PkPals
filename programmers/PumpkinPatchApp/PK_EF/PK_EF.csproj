@@ -43,6 +43,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,11 +53,99 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CATEGORY.cs">
+      <DependentUpon>PKModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CROP.cs">
+      <DependentUpon>PKModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CROP_WATER_STATUS.cs">
+      <DependentUpon>PKModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CUSTOMER.cs">
+      <DependentUpon>PKModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CUSTOMERROSTER.cs">
+      <DependentUpon>PKModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EMPLOYEE.cs">
+      <DependentUpon>PKModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EQUIPMENT.cs">
+      <DependentUpon>PKModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FARM.cs">
+      <DependentUpon>PKModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="INVENTORY.cs">
+      <DependentUpon>PKModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PKModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PKModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PKModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PKModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PKModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PKModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="PLOT.cs">
+      <DependentUpon>PKModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ROLE.cs">
+      <DependentUpon>PKModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SCHEDULE.cs">
+      <DependentUpon>PKModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="STATUS.cs">
+      <DependentUpon>PKModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SUPPLy.cs">
+      <DependentUpon>PKModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USER.cs">
+      <DependentUpon>PKModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USERROLE.cs">
+      <DependentUpon>PKModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USER_POSITION.cs">
+      <DependentUpon>PKModel.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <EntityDeploy Include="PKModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PKModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="PKModel.edmx.diagram">
+      <DependentUpon>PKModel.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PKModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PKModel.edmx</DependentUpon>
+      <LastGenOutput>PKModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="PKModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PKModel.edmx</DependentUpon>
+      <LastGenOutput>PKModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
