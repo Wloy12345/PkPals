@@ -170,6 +170,8 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Crops\Controllers\CROPsController.cs" />
     <Compile Include="Areas\Crops\CropsAreaRegistration.cs" />
+    <Compile Include="Areas\Customers\CustomersAreaRegistration.cs" />
+    <Compile Include="Areas\Customers\CUSTOMERsController.cs" />
     <Compile Include="Areas\Supplies\Controllers\SUPPLiesController.cs" />
     <Compile Include="Areas\Supplies\SuppliesAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -226,6 +228,14 @@
     <Content Include="Areas\Supplies\Views\SUPPLies\Details.cshtml" />
     <Content Include="Areas\Supplies\Views\SUPPLies\Edit.cshtml" />
     <Content Include="Areas\Supplies\Views\SUPPLies\Index.cshtml" />
+    <Content Include="Areas\Customers\Views\web.config" />
+    <Content Include="Areas\Customers\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Customers\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Customers\Views\CUSTOMERs\Create.cshtml" />
+    <Content Include="Areas\Customers\Views\CUSTOMERs\Delete.cshtml" />
+    <Content Include="Areas\Customers\Views\CUSTOMERs\Details.cshtml" />
+    <Content Include="Areas\Customers\Views\CUSTOMERs\Edit.cshtml" />
+    <Content Include="Areas\Customers\Views\CUSTOMERs\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -275,7 +285,10 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Crops\Data\" />
+    <Folder Include="Areas\Customers\Controllers\" />
+    <Folder Include="Areas\Customers\Data\" />
     <Folder Include="Areas\Supplies\Data\" />
+    <Folder Include="Fonts\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
