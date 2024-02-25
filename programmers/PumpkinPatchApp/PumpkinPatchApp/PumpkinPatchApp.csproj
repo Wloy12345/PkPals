@@ -168,6 +168,10 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\Crops\Controllers\CROPsController.cs" />
+    <Compile Include="Areas\Crops\CropsAreaRegistration.cs" />
+    <Compile Include="Areas\Supplies\Controllers\SUPPLiesController.cs" />
+    <Compile Include="Areas\Supplies\SuppliesAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -206,6 +210,22 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\Crops\Views\web.config" />
+    <Content Include="Areas\Crops\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Crops\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Crops\Views\CROPs\Create.cshtml" />
+    <Content Include="Areas\Crops\Views\CROPs\Delete.cshtml" />
+    <Content Include="Areas\Crops\Views\CROPs\Details.cshtml" />
+    <Content Include="Areas\Crops\Views\CROPs\Edit.cshtml" />
+    <Content Include="Areas\Crops\Views\CROPs\Index.cshtml" />
+    <Content Include="Areas\Supplies\Views\web.config" />
+    <Content Include="Areas\Supplies\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Supplies\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Supplies\Views\SUPPLies\Create.cshtml" />
+    <Content Include="Areas\Supplies\Views\SUPPLies\Delete.cshtml" />
+    <Content Include="Areas\Supplies\Views\SUPPLies\Details.cshtml" />
+    <Content Include="Areas\Supplies\Views\SUPPLies\Edit.cshtml" />
+    <Content Include="Areas\Supplies\Views\SUPPLies\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -254,6 +274,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Crops\Data\" />
+    <Folder Include="Areas\Supplies\Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
