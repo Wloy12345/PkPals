@@ -14,11 +14,22 @@ namespace PK_EF
     
     public partial class EQUIPMENT
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public EQUIPMENT()
+        {
+            this.SCHEDULEs = new HashSet<SCHEDULE>();
+        }
+    
         public int EquipmentID { get; set; }
         public int FarmID { get; set; }
         public int StatusID { get; set; }
         public string Name { get; set; }
         public string Type { get; set; }
         public string Description { get; set; }
+    
+        public virtual FARM FARM { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SCHEDULE> SCHEDULEs { get; set; }
+        public virtual STATUS STATUS { get; set; }
     }
 }

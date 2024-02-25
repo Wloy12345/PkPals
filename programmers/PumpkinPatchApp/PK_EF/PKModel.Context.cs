@@ -13,10 +13,10 @@ namespace PK_EF
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class PKEntities : DbContext
+    public partial class PKPalsEntities : DbContext
     {
-        public PKEntities()
-            : base("name=PKEntities")
+        public PKPalsEntities()
+            : base("name=PKPalsEntities")
         {
         }
     

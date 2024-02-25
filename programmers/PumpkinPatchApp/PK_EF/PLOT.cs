@@ -23,5 +23,9 @@ namespace PK_EF
         public string Size { get; set; }
         public string History { get; set; }
         public System.DateTime DatePlantec { get; set; }
+    
+        public virtual CROP CROP { get; set; }
+        public virtual CROP_WATER_STATUS CROP_WATER_STATUS { get; set; }
+        public virtual FARM FARM { get; set; }
     }
 }

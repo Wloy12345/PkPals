@@ -18,5 +18,8 @@ namespace PK_EF
         public int FarmID { get; set; }
         public int SuppliesID { get; set; }
         public int Quantity { get; set; }
+    
+        public virtual FARM FARM { get; set; }
+        public virtual SUPPLy SUPPLy { get; set; }
     }
 }

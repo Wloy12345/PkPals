@@ -14,6 +14,15 @@ namespace PK_EF
     
     public partial class FARM
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public FARM()
+        {
+            this.CUSTOMERROSTERs = new HashSet<CUSTOMERROSTER>();
+            this.EQUIPMENTs = new HashSet<EQUIPMENT>();
+            this.INVENTORies = new HashSet<INVENTORY>();
+            this.PLOTs = new HashSet<PLOT>();
+        }
+    
         public int FarmID { get; set; }
         public string Name { get; set; }
         public string Size { get; set; }
@@ -21,5 +30,14 @@ namespace PK_EF
         public string State { get; set; }
         public string City { get; set; }
         public int ZipCode { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CUSTOMERROSTER> CUSTOMERROSTERs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<EQUIPMENT> EQUIPMENTs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<INVENTORY> INVENTORies { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PLOT> PLOTs { get; set; }
     }
 }

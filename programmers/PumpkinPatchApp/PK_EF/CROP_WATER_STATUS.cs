@@ -14,7 +14,16 @@ namespace PK_EF
     
     public partial class CROP_WATER_STATUS
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public CROP_WATER_STATUS()
+        {
+            this.PLOTs = new HashSet<PLOT>();
+        }
+    
         public int CropWaterStatusID { get; set; }
         public string Name { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PLOT> PLOTs { get; set; }
     }
 }

@@ -14,7 +14,16 @@ namespace PK_EF
     
     public partial class USER_POSITION
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public USER_POSITION()
+        {
+            this.EMPLOYEEs = new HashSet<EMPLOYEE>();
+        }
+    
         public int PositionID { get; set; }
         public string Name { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<EMPLOYEE> EMPLOYEEs { get; set; }
     }
 }

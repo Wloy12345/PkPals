@@ -17,5 +17,8 @@ namespace PK_EF
         public int UserRoleID { get; set; }
         public int UserID { get; set; }
         public int RoleID { get; set; }
+    
+        public virtual ROLE ROLE { get; set; }
+        public virtual USER USER { get; set; }
     }
 }

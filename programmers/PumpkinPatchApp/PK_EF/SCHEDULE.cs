@@ -19,5 +19,8 @@ namespace PK_EF
         public int EquipmentID { get; set; }
         public System.DateTime Time { get; set; }
         public string IsApproved { get; set; }
+    
+        public virtual EMPLOYEE EMPLOYEE { get; set; }
+        public virtual EQUIPMENT EQUIPMENT { get; set; }
     }
 }

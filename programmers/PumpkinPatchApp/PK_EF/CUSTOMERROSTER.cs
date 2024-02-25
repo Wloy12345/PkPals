@@ -17,5 +17,8 @@ namespace PK_EF
         public int CustomerRosterID { get; set; }
         public int CustomerID { get; set; }
         public int FarmID { get; set; }
+    
+        public virtual CUSTOMER CUSTOMER { get; set; }
+        public virtual FARM FARM { get; set; }
     }
 }

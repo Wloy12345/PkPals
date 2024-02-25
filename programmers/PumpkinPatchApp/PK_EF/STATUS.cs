@@ -14,8 +14,17 @@ namespace PK_EF
     
     public partial class STATUS
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public STATUS()
+        {
+            this.EQUIPMENTs = new HashSet<EQUIPMENT>();
+        }
+    
         public int StatusID { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<EQUIPMENT> EQUIPMENTs { get; set; }
     }
 }
