@@ -203,6 +203,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\custom.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -236,6 +237,8 @@
     <Content Include="Areas\Customers\Views\CUSTOMERs\Details.cshtml" />
     <Content Include="Areas\Customers\Views\CUSTOMERs\Edit.cshtml" />
     <Content Include="Areas\Customers\Views\CUSTOMERs\Index.cshtml" />
+    <Content Include="Fonts\LEMONMILK-Bold.otf" />
+    <Content Include="Fonts\LEMONMILK-Regular.otf" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -288,7 +291,6 @@
     <Folder Include="Areas\Customers\Controllers\" />
     <Folder Include="Areas\Customers\Data\" />
     <Folder Include="Areas\Supplies\Data\" />
-    <Folder Include="Fonts\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />

@@ -38,11 +38,11 @@
     --bs-gray-700: #495057;
     --bs-gray-800: #333;
     --bs-gray-900: #212529;
-    --bs-primary: #f5c073;
-    --bs-secondary: #012b1c;
-    --bs-success: #165e45;
-    --bs-info: #d1dff6;
-    --bs-warning: #ad3a05;
+    --bs-primary: #e95420;
+    --bs-secondary: #aea79f;
+    --bs-success: #38b44a;
+    --bs-info: #17a2b8;
+    --bs-warning: #efb73e;
     --bs-danger: #df382c;
     --bs-light: #e9ecef;
     --bs-dark: #772953;
@@ -87,7 +87,7 @@
     --bs-body-font-size: 1rem;
     --bs-body-font-weight: 400;
     --bs-body-line-height: 1.5;
-    --bs-body-color: #164e45;
+    --bs-body-color: #333;
     --bs-body-color-rgb: 51, 51, 51;
     --bs-body-bg: #fff;
     --bs-body-bg-rgb: 255, 255, 255;
@@ -136,9 +136,9 @@
 
 [data-bs-theme=dark] {
     color-scheme: dark;
-    --bs-body-color: #164e45;
+    --bs-body-color: #dee2e6;
     --bs-body-color-rgb: 222, 226, 230;
-    --bs-body-bg: #165e45;
+    --bs-body-bg: #212529;
     --bs-body-bg-rgb: 33, 37, 41;
     --bs-emphasis-color: #fff;
     --bs-emphasis-color-rgb: 255, 255, 255;
@@ -204,8 +204,8 @@
 
 body {
     margin: 0;
-    font-family: LemonRegular;
-    font-size: medium;
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
     font-weight: var(--bs-body-font-weight);
     line-height: var(--bs-body-line-height);
     color: var(--bs-body-color);
@@ -280,7 +280,6 @@ h6, .h6 {
 }
 
 p {
-   
     margin-top: 0;
     margin-bottom: 1rem;
 }
@@ -463,7 +462,6 @@ label {
 }
 
 button {
-    font-family: LemonRegular
     border-radius: 0;
 }
 
