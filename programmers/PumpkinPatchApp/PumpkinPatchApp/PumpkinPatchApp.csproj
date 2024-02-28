@@ -240,6 +240,7 @@
     <Content Include="Areas\Crops\Views\CROPs\Details.cshtml" />
     <Content Include="Areas\Crops\Views\CROPs\Edit.cshtml" />
     <Content Include="Areas\Crops\Views\CROPs\Index.cshtml" />
+    <Content Include="Areas\Crops\Views\Shared\_CropHome.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

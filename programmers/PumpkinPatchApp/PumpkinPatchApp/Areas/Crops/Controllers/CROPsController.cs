@@ -17,6 +17,7 @@ namespace PumpkinPatchApp.Areas.Crops.Controllers
         // GET: Crops/CROPs
         public ActionResult Index()
         {
+            
             return View(db.CROPs.ToList());
         }
 
