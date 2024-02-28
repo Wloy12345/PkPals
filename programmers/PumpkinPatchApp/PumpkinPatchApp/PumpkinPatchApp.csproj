@@ -216,11 +216,6 @@
     <Content Include="Areas\Crops\Views\web.config" />
     <Content Include="Areas\Crops\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Crops\Views\Shared\_Layout.cshtml" />
-    <Content Include="Areas\Crops\Views\CROPs\Create.cshtml" />
-    <Content Include="Areas\Crops\Views\CROPs\Delete.cshtml" />
-    <Content Include="Areas\Crops\Views\CROPs\Details.cshtml" />
-    <Content Include="Areas\Crops\Views\CROPs\Edit.cshtml" />
-    <Content Include="Areas\Crops\Views\CROPs\Index.cshtml" />
     <Content Include="Areas\Supplies\Views\web.config" />
     <Content Include="Areas\Supplies\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Supplies\Views\Shared\_Layout.cshtml" />
@@ -239,6 +234,11 @@
     <Content Include="Areas\Customers\Views\CUSTOMERs\Index.cshtml" />
     <Content Include="Fonts\LEMONMILK-Bold.otf" />
     <Content Include="Fonts\LEMONMILK-Regular.otf" />
+    <Content Include="Areas\Crops\Views\CROPs\Create.cshtml" />
+    <Content Include="Areas\Crops\Views\CROPs\Delete.cshtml" />
+    <Content Include="Areas\Crops\Views\CROPs\Details.cshtml" />
+    <Content Include="Areas\Crops\Views\CROPs\Edit.cshtml" />
+    <Content Include="Areas\Crops\Views\CROPs\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
