@@ -208,6 +208,11 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\corn.jpg" />
+    <Content Include="Images\green wheat.jpg" />
+    <Content Include="Images\haybale.jpg" />
+    <Content Include="Images\logo-hollow-white.png" />
+    <Content Include="Images\tractor.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
