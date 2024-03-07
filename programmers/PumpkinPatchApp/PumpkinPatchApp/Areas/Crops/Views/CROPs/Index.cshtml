@@ -11,7 +11,7 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table style=" background-color:#e4e29d; background-blend-mode: lighten;">
+<table id="cropTable">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Name)
@@ -45,45 +45,46 @@
         </th>
         <th></th>
     </tr>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DaysTillHarvest)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Season)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SelfLife)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MarketValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WaterAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CropRotationRecom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HarvestTechniques)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.CropID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.CropID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.CropID })
+            </td>
+        </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Type)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DaysTillHarvest)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Season)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SelfLife)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MarketValue)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.WaterAmount)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CropRotationRecom)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HarvestTechniques)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CropID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.CropID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.CropID })
-        </td>
-    </tr>
-}
+    }
 
-</table>
+    </table>
