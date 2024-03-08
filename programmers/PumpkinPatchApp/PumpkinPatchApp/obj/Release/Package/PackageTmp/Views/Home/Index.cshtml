@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<main>
+    <section class="row" aria-labelledby="aspnetTitle">
+        <h1 id="title">Farm Management</h1>
+        <p class="lead">Welcome back to the Pumpkin Patch! .</p>
+        <p class="lead">Thank you for using the most efficiant way to organize your crops, supplies, equipment, and more!</p>
+        <p><a href="http://dotnet.reynolds.edu/CapStudent/PKPalsWeb/" class="btn btn-primary btn-md">Visit our website &raquo;</a></p>
+    </section>
+
+    <div class="row">
+        <section class="col-md-4" aria-labelledby="gettingStartedTitle">
+            <h2 id="gettingStartedTitle">My Crops</h2>
+            <style>
+                img {
+                    width: 200px;
+                    height: auto
+                }
+            </style>
+            <img src="~/Images/corn.jpg" />
+            <p>
+                Pumpkin Patch gives you an easy to use index to organize the crops that you grow (or plan to grow) on your farm. Whether you grow 5 or 500 crops, let Pumpkin Patch do the work for you so you don't have to.
+            <p><a class="btn btn-success" href="https://go.microsoft.com/fwlink/?LinkId=301865">View My Crops &raquo;</a></p>
+        </section>
+        <section class="col-md-4" aria-labelledby="librariesTitle">
+            <h2 id="librariesTitle">My Supplies</h2>
+            <style>
+                img {
+                    width: 200px;
+                    height: auto
+                }
+            </style>
+            <img src="~/Images/haybale.jpg" /> 
+            <p>Organize the supplies you have on hand so you know what you have and when you are running low. With Pumpkin Patch you can filter by the type of supply for easier viewing.</p>
+            <p><a class="btn btn-success" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        </section>
+        <section class="col-md-4" aria-labelledby="hostingTitle">
+            <h2 id="hostingTitle">Equipment</h2>
+            <style>
+                img {
+                    width: 200px;
+                    height: auto
+                }
+            </style>
+            <img src="~/Images/tractor.jpg" />
+            <p>Keep a look out for more new features coming soon!.</p>
+            @*<p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>*@
+        </section>
+    </div>
+</main>

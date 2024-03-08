@@ -172,6 +172,8 @@
     <Compile Include="Areas\Crops\CropsAreaRegistration.cs" />
     <Compile Include="Areas\Customers\CustomersAreaRegistration.cs" />
     <Compile Include="Areas\Customers\CUSTOMERsController.cs" />
+    <Compile Include="Areas\Equipment\Controllers\EQUIPMENTsController.cs" />
+    <Compile Include="Areas\Equipment\EquipmentAreaRegistration.cs" />
     <Compile Include="Areas\Supplies\Controllers\SUPPLiesController.cs" />
     <Compile Include="Areas\Supplies\SuppliesAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -208,6 +210,11 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\corn.jpg" />
+    <Content Include="Images\green wheat.jpg" />
+    <Content Include="Images\haybale.jpg" />
+    <Content Include="Images\logo-hollow-white.png" />
+    <Content Include="Images\tractor.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -241,6 +248,14 @@
     <Content Include="Areas\Crops\Views\CROPs\Edit.cshtml" />
     <Content Include="Areas\Crops\Views\CROPs\Index.cshtml" />
     <Content Include="Areas\Crops\Views\Shared\_CropHome.cshtml" />
+    <Content Include="Areas\Equipment\Views\web.config" />
+    <Content Include="Areas\Equipment\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Equipment\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Equipment\Views\EQUIPMENTs\Create.cshtml" />
+    <Content Include="Areas\Equipment\Views\EQUIPMENTs\Delete.cshtml" />
+    <Content Include="Areas\Equipment\Views\EQUIPMENTs\Details.cshtml" />
+    <Content Include="Areas\Equipment\Views\EQUIPMENTs\Edit.cshtml" />
+    <Content Include="Areas\Equipment\Views\EQUIPMENTs\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -252,6 +267,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\tableexport.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -292,6 +308,7 @@
     <Folder Include="Areas\Crops\Data\" />
     <Folder Include="Areas\Customers\Controllers\" />
     <Folder Include="Areas\Customers\Data\" />
+    <Folder Include="Areas\Equipment\Data\" />
     <Folder Include="Areas\Supplies\Data\" />
   </ItemGroup>
   <ItemGroup>

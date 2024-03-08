@@ -1,0 +1,57 @@
+﻿@model IEnumerable<PK_EF.EQUIPMENT>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FARM.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STATUS.Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FARM.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.STATUS.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EquipmentID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EquipmentID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EquipmentID })
+        </td>
+    </tr>
+}
+
+</table>
