@@ -176,6 +176,8 @@
     <Compile Include="Areas\Equipment\EquipmentAreaRegistration.cs" />
     <Compile Include="Areas\Supplies\Controllers\SUPPLiesController.cs" />
     <Compile Include="Areas\Supplies\SuppliesAreaRegistration.cs" />
+    <Compile Include="Areas\WaterStatus\Controllers\CROP_WATER_STATUSController.cs" />
+    <Compile Include="Areas\WaterStatus\WaterStatusAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -256,6 +258,14 @@
     <Content Include="Areas\Equipment\Views\EQUIPMENTs\Details.cshtml" />
     <Content Include="Areas\Equipment\Views\EQUIPMENTs\Edit.cshtml" />
     <Content Include="Areas\Equipment\Views\EQUIPMENTs\Index.cshtml" />
+    <Content Include="Areas\WaterStatus\Views\web.config" />
+    <Content Include="Areas\WaterStatus\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\WaterStatus\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\WaterStatus\Views\CROP_WATER_STATUS\Create.cshtml" />
+    <Content Include="Areas\WaterStatus\Views\CROP_WATER_STATUS\Delete.cshtml" />
+    <Content Include="Areas\WaterStatus\Views\CROP_WATER_STATUS\Details.cshtml" />
+    <Content Include="Areas\WaterStatus\Views\CROP_WATER_STATUS\Edit.cshtml" />
+    <Content Include="Areas\WaterStatus\Views\CROP_WATER_STATUS\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -310,6 +320,7 @@
     <Folder Include="Areas\Customers\Data\" />
     <Folder Include="Areas\Equipment\Data\" />
     <Folder Include="Areas\Supplies\Data\" />
+    <Folder Include="Areas\WaterStatus\Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
