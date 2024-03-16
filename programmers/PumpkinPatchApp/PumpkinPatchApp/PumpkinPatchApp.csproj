@@ -266,6 +266,9 @@
     <Content Include="Areas\WaterStatus\Views\CROP_WATER_STATUS\Details.cshtml" />
     <Content Include="Areas\WaterStatus\Views\CROP_WATER_STATUS\Edit.cshtml" />
     <Content Include="Areas\WaterStatus\Views\CROP_WATER_STATUS\Index.cshtml" />
+    <Content Include="Areas\Customers\Views\Shared\_CustomerHome.cshtml" />
+    <Content Include="Areas\Equipment\Views\Shared\_EquipmentHome.cshtml" />
+    <Content Include="Areas\Supplies\Views\Shared\_SupplyHome.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
