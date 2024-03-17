@@ -213,6 +213,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Images\corn.jpg" />
+    <Content Include="Images\customers-shopping.jpeg" />
     <Content Include="Images\green wheat.jpg" />
     <Content Include="Images\haybale.jpg" />
     <Content Include="Images\logo-hollow-white.png" />
