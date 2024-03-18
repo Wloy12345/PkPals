@@ -94,3 +94,18 @@ $(document).ready(function() {
     $(this).addClass('bi-caret-down');
   });
 });
+
+// Intersecting Observer API
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry)
+    if (entry.isIntersecting) {
+      entry.target.classList.add('picAnimate');
+    }
+  });
+});
+
+const elements = document.querySelectorAll('.hiddenPic');
+elements.forEach(element => {
+  observer.observe(element);
+});

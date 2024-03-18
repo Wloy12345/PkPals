@@ -176,6 +176,30 @@ button, a {
 }
 
 /* animations */
+.hiddenPic {
+    opacity: 0;
+    transition: all 0.5s;
+    transform: translateX(-100px);
+    filter: blur(0.4em);
+}
+.picAnimate {
+    opacity: 1;
+    transform: translateX(0px);
+    filter: blur(0em);
+}
+.pic:nth-child(2) {
+    transition-delay: 200ms;
+}
+.pic:nth-child(3) {
+    transition-delay: 400ms;
+}
+.pic:nth-child(4) {
+    transition-delay: 600ms;
+}
+.pic:nth-child(5) {
+    transition-delay: 800ms;
+}
+
 .fadeIn {
     opacity: 0;
     scale: 0.8;
@@ -236,5 +260,112 @@ button, a {
     }
     100% {
         transform: translateY(0px);
+    }
+}
+
+/* #polygon1, #polygon2, #polygon3 {
+    transition: all 1s ease;
+}
+#polygon2 {
+    transform: translateX(-100%);
+}
+svg:hover #polygon1 {
+    transform: translateX(20%);
+}
+svg:hover #polygon3 {
+    transform: translateX(40%);
+    opacity: 0;
+}
+svg:hover #polygon2 {
+    transform: translateX(0%);
+} */
+
+#polygon1 {
+    animation: poly1 4s ease infinite;
+}
+@keyframes poly1 {
+    0% {
+        transform: translateX(0%);
+    }
+    50% {
+        transform: translateX(20%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+#polygon2 {
+    animation: poly2 4s ease infinite;
+}
+@keyframes poly2 {
+    0% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+#polygon3 {
+    animation: poly3 4s ease infinite;
+}
+@keyframes poly3 {
+    0% {
+        transform: translateX(0%);
+    }
+    50% {
+        transform: translateX(40%);
+        filter: blur(0.4em);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+#polygon4 {
+    animation: poly4 4s ease infinite;
+}
+@keyframes poly4 {
+    0% {
+        transform: translateX(0%);
+    }
+    50% {
+        transform: translateX(-40%);
+        filter: blur(0.4em);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+#polygon5 {
+    animation: poly5 4s ease infinite;
+}
+@keyframes poly5 {
+    0% {
+        transform: translateX(100%);
+    }
+    50% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+#polygon6 {
+    animation: poly6 4s ease infinite;
+}
+@keyframes poly6 {
+    0% {
+        transform: translateX(0%);
+    }
+    50% {
+        transform: translateX(-20%);
+    }
+    100% {
+        transform: translateX(0%);
     }
 }
