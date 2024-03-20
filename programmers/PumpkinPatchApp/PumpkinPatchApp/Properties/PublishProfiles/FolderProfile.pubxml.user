@@ -5,10 +5,25 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\evaba\OneDrive\Desktop\CapstoneProject</_PublishTargetUrl>
-    <History>True|2024-03-17T22:16:47.0171834Z;True|2024-03-17T15:28:28.6486453-04:00;True|2024-03-16T00:15:24.4576635-04:00;True|2024-03-06T17:51:28.8194884-05:00;True|2024-03-06T00:38:26.8296832-05:00;</History>
+    <History>True|2024-03-20T21:31:22.1916860Z;True|2024-03-17T18:16:47.0171834-04:00;True|2024-03-17T15:28:28.6486453-04:00;True|2024-03-16T00:15:24.4576635-04:00;True|2024-03-06T17:51:28.8194884-05:00;True|2024-03-06T00:38:26.8296832-05:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
+    <File Include="Areas/Crops/Views/CropHome/Create.cshtml">
+      <publishTime>03/20/2024 17:28:28</publishTime>
+    </File>
+    <File Include="Areas/Crops/Views/CropHome/Delete.cshtml">
+      <publishTime>03/20/2024 17:28:29</publishTime>
+    </File>
+    <File Include="Areas/Crops/Views/CropHome/Details.cshtml">
+      <publishTime>03/20/2024 17:28:30</publishTime>
+    </File>
+    <File Include="Areas/Crops/Views/CropHome/Edit.cshtml">
+      <publishTime>03/20/2024 17:28:31</publishTime>
+    </File>
+    <File Include="Areas/Crops/Views/CropHome/Index.cshtml">
+      <publishTime>03/20/2024 17:30:05</publishTime>
+    </File>
     <File Include="Areas/Crops/Views/CROPs/Create.cshtml">
       <publishTime>02/27/2024 20:18:01</publishTime>
     </File>
@@ -25,7 +40,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>03/17/2024 15:27:59</publishTime>
     </File>
     <File Include="Areas/Crops/Views/Shared/_CropHome.cshtml">
-      <publishTime>03/17/2024 18:16:17</publishTime>
+      <publishTime>03/20/2024 17:30:07</publishTime>
     </File>
     <File Include="Areas/Crops/Views/Shared/_Layout.cshtml">
       <publishTime>03/06/2024 19:51:48</publishTime>
@@ -211,10 +226,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>03/06/2024 00:38:24</publishTime>
     </File>
     <File Include="bin/PumpkinPatchApp.dll">
-      <publishTime>03/17/2024 18:16:46</publishTime>
+      <publishTime>03/20/2024 17:31:21</publishTime>
     </File>
     <File Include="bin/PumpkinPatchApp.pdb">
-      <publishTime>03/17/2024 18:16:46</publishTime>
+      <publishTime>03/20/2024 17:31:21</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>08/08/2018 06:38:48</publishTime>
@@ -637,7 +652,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>02/21/2024 18:43:08</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>03/17/2024 16:17:50</publishTime>
+      <publishTime>03/20/2024 17:25:35</publishTime>
     </File>
     <File Include="Views/Manage/AddPhoneNumber.cshtml">
       <publishTime>02/21/2024 18:43:13</publishTime>
@@ -664,7 +679,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>02/21/2024 18:43:13</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>03/17/2024 16:19:06</publishTime>
+      <publishTime>03/20/2024 17:25:35</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>03/14/2024 10:55:57</publishTime>

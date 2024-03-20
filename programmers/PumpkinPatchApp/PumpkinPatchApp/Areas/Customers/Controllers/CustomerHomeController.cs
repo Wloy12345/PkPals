@@ -8,19 +8,19 @@ using System.Web;
 using System.Web.Mvc;
 using PK_EF;
 
-namespace PumpkinPatchApp.Areas.Customers
+namespace PumpkinPatchApp.Areas.Customers.Controllers
 {
-    public class CUSTOMERsController : Controller
+    public class CustomerHomeController : Controller
     {
         private PKPalsEntities db = new PKPalsEntities();
 
-        // GET: Customers/CUSTOMERs
+        // GET: Customers/CustomerHome
         public ActionResult Index()
         {
             return View(db.CUSTOMERs.ToList());
         }
 
-        // GET: Customers/CUSTOMERs/Details/5
+        // GET: Customers/CustomerHome/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -35,13 +35,13 @@ namespace PumpkinPatchApp.Areas.Customers
             return View(cUSTOMER);
         }
 
-        // GET: Customers/CUSTOMERs/Create
+        // GET: Customers/CustomerHome/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Customers/CUSTOMERs/Create
+        // POST: Customers/CustomerHome/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -58,7 +58,7 @@ namespace PumpkinPatchApp.Areas.Customers
             return View(cUSTOMER);
         }
 
-        // GET: Customers/CUSTOMERs/Edit/5
+        // GET: Customers/CustomerHome/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -73,7 +73,7 @@ namespace PumpkinPatchApp.Areas.Customers
             return View(cUSTOMER);
         }
 
-        // POST: Customers/CUSTOMERs/Edit/5
+        // POST: Customers/CustomerHome/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -89,7 +89,7 @@ namespace PumpkinPatchApp.Areas.Customers
             return View(cUSTOMER);
         }
 
-        // GET: Customers/CUSTOMERs/Delete/5
+        // GET: Customers/CustomerHome/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -104,7 +104,7 @@ namespace PumpkinPatchApp.Areas.Customers
             return View(cUSTOMER);
         }
 
-        // POST: Customers/CUSTOMERs/Delete/5
+        // POST: Customers/CustomerHome/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

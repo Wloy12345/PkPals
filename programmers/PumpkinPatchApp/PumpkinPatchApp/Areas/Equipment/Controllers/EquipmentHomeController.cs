@@ -8,110 +8,118 @@ using System.Web;
 using System.Web.Mvc;
 using PK_EF;
 
-namespace PumpkinPatchApp.Areas.Crops.Controllers
+namespace PumpkinPatchApp.Areas.Equipment.Controllers
 {
-    public class CROPsController : Controller
+    public class EquipmentHomeController : Controller
     {
         private PKPalsEntities db = new PKPalsEntities();
 
-        // GET: Crops/CROPs
+        // GET: Equipment/EquipmentHome
         public ActionResult Index()
         {
-            
-            return View(db.CROPs.ToList());
+            var eQUIPMENTs = db.EQUIPMENTs.Include(e => e.FARM).Include(e => e.STATUS);
+            return View(eQUIPMENTs.ToList());
         }
 
-        // GET: Crops/CROPs/Details/5
+        // GET: Equipment/EquipmentHome/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            CROP cROP = db.CROPs.Find(id);
-            if (cROP == null)
+            EQUIPMENT eQUIPMENT = db.EQUIPMENTs.Find(id);
+            if (eQUIPMENT == null)
             {
                 return HttpNotFound();
             }
-            return View(cROP);
+            return View(eQUIPMENT);
         }
 
-        // GET: Crops/CROPs/Create
+        // GET: Equipment/EquipmentHome/Create
         public ActionResult Create()
         {
+            ViewBag.FarmID = new SelectList(db.FARMs, "FarmID", "Name");
+            ViewBag.StatusID = new SelectList(db.STATUS, "StatusID", "Name");
             return View();
         }
 
-        // POST: Crops/CROPs/Create
+        // POST: Equipment/EquipmentHome/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CropID,Name,Description,Type,DaysTillHarvest,Season,SelfLife,MarketValue,WaterAmount,CropRotationRecom,HarvestTechniques")] CROP cROP)
+        public ActionResult Create([Bind(Include = "EquipmentID,FarmID,StatusID,Name,Type,Description")] EQUIPMENT eQUIPMENT)
         {
             if (ModelState.IsValid)
             {
-                db.CROPs.Add(cROP);
+                db.EQUIPMENTs.Add(eQUIPMENT);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(cROP);
+            ViewBag.FarmID = new SelectList(db.FARMs, "FarmID", "Name", eQUIPMENT.FarmID);
+            ViewBag.StatusID = new SelectList(db.STATUS, "StatusID", "Name", eQUIPMENT.StatusID);
+            return View(eQUIPMENT);
         }
 
-        // GET: Crops/CROPs/Edit/5
+        // GET: Equipment/EquipmentHome/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            CROP cROP = db.CROPs.Find(id);
-            if (cROP == null)
+            EQUIPMENT eQUIPMENT = db.EQUIPMENTs.Find(id);
+            if (eQUIPMENT == null)
             {
                 return HttpNotFound();
             }
-            return View(cROP);
+            ViewBag.FarmID = new SelectList(db.FARMs, "FarmID", "Name", eQUIPMENT.FarmID);
+            ViewBag.StatusID = new SelectList(db.STATUS, "StatusID", "Name", eQUIPMENT.StatusID);
+            return View(eQUIPMENT);
         }
 
-        // POST: Crops/CROPs/Edit/5
+        // POST: Equipment/EquipmentHome/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CropID,Name,Description,Type,DaysTillHarvest,Season,SelfLife,MarketValue,WaterAmount,CropRotationRecom,HarvestTechniques")] CROP cROP)
+        public ActionResult Edit([Bind(Include = "EquipmentID,FarmID,StatusID,Name,Type,Description")] EQUIPMENT eQUIPMENT)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(cROP).State = EntityState.Modified;
+                db.Entry(eQUIPMENT).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(cROP);
+            ViewBag.FarmID = new SelectList(db.FARMs, "FarmID", "Name", eQUIPMENT.FarmID);
+            ViewBag.StatusID = new SelectList(db.STATUS, "StatusID", "Name", eQUIPMENT.StatusID);
+            return View(eQUIPMENT);
         }
 
-        // GET: Crops/CROPs/Delete/5
+        // GET: Equipment/EquipmentHome/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            CROP cROP = db.CROPs.Find(id);
-            if (cROP == null)
+            EQUIPMENT eQUIPMENT = db.EQUIPMENTs.Find(id);
+            if (eQUIPMENT == null)
             {
                 return HttpNotFound();
             }
-            return View(cROP);
+            return View(eQUIPMENT);
         }
 
-        // POST: Crops/CROPs/Delete/5
+        // POST: Equipment/EquipmentHome/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            CROP cROP = db.CROPs.Find(id);
-            db.CROPs.Remove(cROP);
+            EQUIPMENT eQUIPMENT = db.EQUIPMENTs.Find(id);
+            db.EQUIPMENTs.Remove(eQUIPMENT);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
