@@ -40,7 +40,10 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - PKPals </p>
+            <p>
+                &copy; @DateTime.Now.Year - PKPals v @Assembly.GetAssembly(typeof(
+Cssa2023.Controllers.HomeController)).GetName().Version.ToString()
+            </p>
         </footer>
     </div>
 
