@@ -26,10 +26,10 @@
             <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
                 <ul class="navbar-nav flex-grow-1">
 
-                    <li>@Html.ActionLink("My Crops", "Index", new { area = "Crops", controller = "CROPs" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("My Supplies", "Index", new { area = "Supplies", controller = "SUPPLies" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("My Equipment", "Index", new { area = "Equipment", controller = "EQUIPMENTs" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("My Customers", "Index", new { area = "Customers", controller = "CUSTOMERs" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("My Crops", "Index", new { area = "Crops", controller = "CropsHome" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("My Supplies", "Index", new { area = "Supplies", controller = "SupplyHome" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("My Equipment", "Index", new { area = "Equipment", controller = "EquipmentHome" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("My Customers", "Index", new { area = "Customers", controller = "CustomerHome" }, new { @class = "nav-link" })</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
