@@ -178,7 +178,7 @@ button, a {
 /* animations */
 .hiddenPic {
     opacity: 0;
-    transition: all 0.5s;
+    transition: all 1.5s;
     transform: translateX(-100px);
     filter: blur(0.4em);
 }
@@ -188,16 +188,16 @@ button, a {
     filter: blur(0em);
 }
 .pic:nth-child(2) {
-    transition-delay: 200ms;
-}
-.pic:nth-child(3) {
     transition-delay: 400ms;
 }
+.pic:nth-child(3) {
+    transition-delay: 800ms;
+}
 .pic:nth-child(4) {
-    transition-delay: 600ms;
+    transition-delay: 1200ms;
 }
 .pic:nth-child(5) {
-    transition-delay: 800ms;
+    transition-delay: 1600ms;
 }
 
 .fadeIn {
@@ -368,4 +368,10 @@ svg:hover #polygon2 {
     100% {
         transform: translateX(0%);
     }
+}
+
+/* Extra classes for layout */
+.whitebg {
+    background-color: #ffffff;
+    box-shadow: 0 20px 3em #1a1a1a25;
 }
