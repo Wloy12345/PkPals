@@ -174,10 +174,8 @@
     <Compile Include="Areas\Customers\CustomersAreaRegistration.cs" />
     <Compile Include="Areas\Equipment\Controllers\EquipmentHomeController.cs" />
     <Compile Include="Areas\Equipment\EquipmentAreaRegistration.cs" />
-    <Compile Include="Areas\Supplies\Controllers\SUPPLiesController.cs" />
+    <Compile Include="Areas\Supplies\Controllers\SupplyHomeController.cs" />
     <Compile Include="Areas\Supplies\SuppliesAreaRegistration.cs" />
-    <Compile Include="Areas\WaterStatus\Controllers\CROP_WATER_STATUSController.cs" />
-    <Compile Include="Areas\WaterStatus\WaterStatusAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -230,11 +228,6 @@
     <Content Include="Areas\Supplies\Views\web.config" />
     <Content Include="Areas\Supplies\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Supplies\Views\Shared\_Layout.cshtml" />
-    <Content Include="Areas\Supplies\Views\SUPPLies\Create.cshtml" />
-    <Content Include="Areas\Supplies\Views\SUPPLies\Delete.cshtml" />
-    <Content Include="Areas\Supplies\Views\SUPPLies\Details.cshtml" />
-    <Content Include="Areas\Supplies\Views\SUPPLies\Edit.cshtml" />
-    <Content Include="Areas\Supplies\Views\SUPPLies\Index.cshtml" />
     <Content Include="Areas\Customers\Views\web.config" />
     <Content Include="Areas\Customers\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Customers\Views\Shared\_Layout.cshtml" />
@@ -244,19 +237,6 @@
     <Content Include="Areas\Equipment\Views\web.config" />
     <Content Include="Areas\Equipment\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Equipment\Views\Shared\_Layout.cshtml" />
-    <Content Include="Areas\Equipment\Views\EQUIPMENTs\Create.cshtml" />
-    <Content Include="Areas\Equipment\Views\EQUIPMENTs\Delete.cshtml" />
-    <Content Include="Areas\Equipment\Views\EQUIPMENTs\Details.cshtml" />
-    <Content Include="Areas\Equipment\Views\EQUIPMENTs\Edit.cshtml" />
-    <Content Include="Areas\Equipment\Views\EQUIPMENTs\Index.cshtml" />
-    <Content Include="Areas\WaterStatus\Views\web.config" />
-    <Content Include="Areas\WaterStatus\Views\_ViewStart.cshtml" />
-    <Content Include="Areas\WaterStatus\Views\Shared\_Layout.cshtml" />
-    <Content Include="Areas\WaterStatus\Views\CROP_WATER_STATUS\Create.cshtml" />
-    <Content Include="Areas\WaterStatus\Views\CROP_WATER_STATUS\Delete.cshtml" />
-    <Content Include="Areas\WaterStatus\Views\CROP_WATER_STATUS\Details.cshtml" />
-    <Content Include="Areas\WaterStatus\Views\CROP_WATER_STATUS\Edit.cshtml" />
-    <Content Include="Areas\WaterStatus\Views\CROP_WATER_STATUS\Index.cshtml" />
     <Content Include="Areas\Customers\Views\Shared\_CustomerHome.cshtml" />
     <Content Include="Areas\Equipment\Views\Shared\_EquipmentHome.cshtml" />
     <Content Include="Areas\Supplies\Views\Shared\_SupplyHome.cshtml" />
@@ -275,6 +255,11 @@
     <Content Include="Areas\Equipment\Views\EquipmentHome\Details.cshtml" />
     <Content Include="Areas\Equipment\Views\EquipmentHome\Edit.cshtml" />
     <Content Include="Areas\Equipment\Views\EquipmentHome\Index.cshtml" />
+    <Content Include="Areas\Supplies\Views\SupplyHome\Create.cshtml" />
+    <Content Include="Areas\Supplies\Views\SupplyHome\Delete.cshtml" />
+    <Content Include="Areas\Supplies\Views\SupplyHome\Details.cshtml" />
+    <Content Include="Areas\Supplies\Views\SupplyHome\Edit.cshtml" />
+    <Content Include="Areas\Supplies\Views\SupplyHome\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -328,7 +313,6 @@
     <Folder Include="Areas\Customers\Data\" />
     <Folder Include="Areas\Equipment\Data\" />
     <Folder Include="Areas\Supplies\Data\" />
-    <Folder Include="Areas\WaterStatus\Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
