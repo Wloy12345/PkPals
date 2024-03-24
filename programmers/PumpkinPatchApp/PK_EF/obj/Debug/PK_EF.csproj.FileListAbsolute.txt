@@ -22,3 +22,15 @@ C:\Users\Dave\Source\Repos\Wloy12345\PkPals\programmers\PumpkinPatchApp\PK_EF\ob
 C:\Users\Dave\Source\Repos\Wloy12345\PkPals\programmers\PumpkinPatchApp\PK_EF\obj\Debug\PK_EF.csproj.CopyComplete
 C:\Users\Dave\Source\Repos\Wloy12345\PkPals\programmers\PumpkinPatchApp\PK_EF\obj\Debug\PK_EF.dll
 C:\Users\Dave\Source\Repos\Wloy12345\PkPals\programmers\PumpkinPatchApp\PK_EF\obj\Debug\PK_EF.pdb
+C:\Users\evaba\source\repos\PK Pals New\programmers\PumpkinPatchApp\PK_EF\bin\Debug\PK_EF.dll.config
+C:\Users\evaba\source\repos\PK Pals New\programmers\PumpkinPatchApp\PK_EF\bin\Debug\PK_EF.dll
+C:\Users\evaba\source\repos\PK Pals New\programmers\PumpkinPatchApp\PK_EF\bin\Debug\PK_EF.pdb
+C:\Users\evaba\source\repos\PK Pals New\programmers\PumpkinPatchApp\PK_EF\bin\Debug\EntityFramework.dll
+C:\Users\evaba\source\repos\PK Pals New\programmers\PumpkinPatchApp\PK_EF\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\evaba\source\repos\PK Pals New\programmers\PumpkinPatchApp\PK_EF\bin\Debug\EntityFramework.xml
+C:\Users\evaba\source\repos\PK Pals New\programmers\PumpkinPatchApp\PK_EF\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\evaba\source\repos\PK Pals New\programmers\PumpkinPatchApp\PK_EF\obj\Debug\PK_EF.csproj.AssemblyReference.cache
+C:\Users\evaba\source\repos\PK Pals New\programmers\PumpkinPatchApp\PK_EF\obj\Debug\PK_EF.csproj.CoreCompileInputs.cache
+C:\Users\evaba\source\repos\PK Pals New\programmers\PumpkinPatchApp\PK_EF\obj\Debug\PK_EF.csproj.CopyComplete
+C:\Users\evaba\source\repos\PK Pals New\programmers\PumpkinPatchApp\PK_EF\obj\Debug\PK_EF.dll
+C:\Users\evaba\source\repos\PK Pals New\programmers\PumpkinPatchApp\PK_EF\obj\Debug\PK_EF.pdb

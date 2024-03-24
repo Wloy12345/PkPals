@@ -10,3 +10,15 @@ C:\Users\evaba\OneDrive\Documents\GitHub\PkPals\programmers\PumpkinPatchApp\PK_E
 C:\Users\evaba\OneDrive\Documents\GitHub\PkPals\programmers\PumpkinPatchApp\PK_EF\obj\Release\PK_EF.csproj.CopyComplete
 C:\Users\evaba\OneDrive\Documents\GitHub\PkPals\programmers\PumpkinPatchApp\PK_EF\obj\Release\PK_EF.dll
 C:\Users\evaba\OneDrive\Documents\GitHub\PkPals\programmers\PumpkinPatchApp\PK_EF\obj\Release\PK_EF.pdb
+C:\Users\evaba\source\repos\PK Pals New\programmers\PumpkinPatchApp\PK_EF\bin\Release\PK_EF.dll.config
+C:\Users\evaba\source\repos\PK Pals New\programmers\PumpkinPatchApp\PK_EF\bin\Release\PK_EF.dll
+C:\Users\evaba\source\repos\PK Pals New\programmers\PumpkinPatchApp\PK_EF\bin\Release\PK_EF.pdb
+C:\Users\evaba\source\repos\PK Pals New\programmers\PumpkinPatchApp\PK_EF\bin\Release\EntityFramework.dll
+C:\Users\evaba\source\repos\PK Pals New\programmers\PumpkinPatchApp\PK_EF\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\evaba\source\repos\PK Pals New\programmers\PumpkinPatchApp\PK_EF\bin\Release\EntityFramework.xml
+C:\Users\evaba\source\repos\PK Pals New\programmers\PumpkinPatchApp\PK_EF\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\evaba\source\repos\PK Pals New\programmers\PumpkinPatchApp\PK_EF\obj\Release\PK_EF.csproj.AssemblyReference.cache
+C:\Users\evaba\source\repos\PK Pals New\programmers\PumpkinPatchApp\PK_EF\obj\Release\PK_EF.csproj.CoreCompileInputs.cache
+C:\Users\evaba\source\repos\PK Pals New\programmers\PumpkinPatchApp\PK_EF\obj\Release\PK_EF.csproj.CopyComplete
+C:\Users\evaba\source\repos\PK Pals New\programmers\PumpkinPatchApp\PK_EF\obj\Release\PK_EF.dll
+C:\Users\evaba\source\repos\PK Pals New\programmers\PumpkinPatchApp\PK_EF\obj\Release\PK_EF.pdb
