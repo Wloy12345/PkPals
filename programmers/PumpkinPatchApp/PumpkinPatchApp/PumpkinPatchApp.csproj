@@ -174,6 +174,8 @@
     <Compile Include="Areas\Customers\CustomersAreaRegistration.cs" />
     <Compile Include="Areas\Equipment\Controllers\EquipmentHomeController.cs" />
     <Compile Include="Areas\Equipment\EquipmentAreaRegistration.cs" />
+    <Compile Include="Areas\InventoryItems\Controllers\InventoryHomeController.cs" />
+    <Compile Include="Areas\InventoryItems\InventoryItemsAreaRegistration.cs" />
     <Compile Include="Areas\Supplies\Controllers\SupplyHomeController.cs" />
     <Compile Include="Areas\Supplies\SuppliesAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -262,6 +264,15 @@
     <Content Include="Areas\Supplies\Views\SupplyHome\Details.cshtml" />
     <Content Include="Areas\Supplies\Views\SupplyHome\Edit.cshtml" />
     <Content Include="Areas\Supplies\Views\SupplyHome\Index.cshtml" />
+    <Content Include="Areas\InventoryItems\Views\web.config" />
+    <Content Include="Areas\InventoryItems\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\InventoryItems\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\InventoryItems\Views\Shared\_Menu.cshtml" />
+    <Content Include="Areas\InventoryItems\Views\InventoryHome\Create.cshtml" />
+    <Content Include="Areas\InventoryItems\Views\InventoryHome\Delete.cshtml" />
+    <Content Include="Areas\InventoryItems\Views\InventoryHome\Details.cshtml" />
+    <Content Include="Areas\InventoryItems\Views\InventoryHome\Edit.cshtml" />
+    <Content Include="Areas\InventoryItems\Views\InventoryHome\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\dataTables.bootstrap5.js" />
     <Content Include="Scripts\dataTables.bootstrap5.min.js" />
@@ -318,6 +329,7 @@
     <Folder Include="Areas\Crops\Data\" />
     <Folder Include="Areas\Customers\Data\" />
     <Folder Include="Areas\Equipment\Data\" />
+    <Folder Include="Areas\InventoryItems\Data\" />
     <Folder Include="Areas\Supplies\Data\" />
   </ItemGroup>
   <ItemGroup>
