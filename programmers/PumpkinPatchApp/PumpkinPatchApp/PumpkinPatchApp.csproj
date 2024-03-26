@@ -178,6 +178,8 @@
     <Compile Include="Areas\InventoryItems\InventoryItemsAreaRegistration.cs" />
     <Compile Include="Areas\Supplies\Controllers\SupplyHomeController.cs" />
     <Compile Include="Areas\Supplies\SuppliesAreaRegistration.cs" />
+    <Compile Include="Areas\SupplyCategoryItems\Controllers\SupplyCategoryHomeController.cs" />
+    <Compile Include="Areas\SupplyCategoryItems\SupplyCategoryItemsAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -273,6 +275,13 @@
     <Content Include="Areas\InventoryItems\Views\InventoryHome\Details.cshtml" />
     <Content Include="Areas\InventoryItems\Views\InventoryHome\Edit.cshtml" />
     <Content Include="Areas\InventoryItems\Views\InventoryHome\Index.cshtml" />
+    <Content Include="Areas\SupplyCategoryItems\Views\web.config" />
+    <Content Include="Areas\SupplyCategoryItems\Views\Shared\_Menu.cshtml" />
+    <Content Include="Areas\SupplyCategoryItems\Views\SupplyCategoryHome\Create.cshtml" />
+    <Content Include="Areas\SupplyCategoryItems\Views\SupplyCategoryHome\Delete.cshtml" />
+    <Content Include="Areas\SupplyCategoryItems\Views\SupplyCategoryHome\Details.cshtml" />
+    <Content Include="Areas\SupplyCategoryItems\Views\SupplyCategoryHome\Edit.cshtml" />
+    <Content Include="Areas\SupplyCategoryItems\Views\SupplyCategoryHome\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\dataTables.bootstrap5.js" />
     <Content Include="Scripts\dataTables.bootstrap5.min.js" />
@@ -331,6 +340,7 @@
     <Folder Include="Areas\Equipment\Data\" />
     <Folder Include="Areas\InventoryItems\Data\" />
     <Folder Include="Areas\Supplies\Data\" />
+    <Folder Include="Areas\SupplyCategoryItems\Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
