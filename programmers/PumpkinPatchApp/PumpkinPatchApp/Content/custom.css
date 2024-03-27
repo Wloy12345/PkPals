@@ -22,7 +22,3 @@ button, a {
     font-family: lemonmilk-regular;
 }
 
-/*Apply CSS styles using :nth-child selector*/
-#cropTable tr:nth-child(odd) {
-    background-color: #164e45; /*Style for odd numbered items*/
-}
