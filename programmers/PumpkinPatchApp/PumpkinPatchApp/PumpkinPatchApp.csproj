@@ -170,6 +170,8 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Crops\Controllers\CropsHomeController.cs" />
     <Compile Include="Areas\Crops\CropsAreaRegistration.cs" />
+    <Compile Include="Areas\CustomerRosterItems\Controllers\CustomerRosterHomeController.cs" />
+    <Compile Include="Areas\CustomerRosterItems\CustomerRosterItemsAreaRegistration.cs" />
     <Compile Include="Areas\Customers\Controllers\CustomerHomeController.cs" />
     <Compile Include="Areas\Customers\CustomersAreaRegistration.cs" />
     <Compile Include="Areas\Equipment\Controllers\EquipmentHomeController.cs" />
@@ -282,6 +284,13 @@
     <Content Include="Areas\SupplyCategoryItems\Views\SupplyCategoryHome\Details.cshtml" />
     <Content Include="Areas\SupplyCategoryItems\Views\SupplyCategoryHome\Edit.cshtml" />
     <Content Include="Areas\SupplyCategoryItems\Views\SupplyCategoryHome\Index.cshtml" />
+    <Content Include="Areas\CustomerRosterItems\Views\web.config" />
+    <Content Include="Areas\CustomerRosterItems\Views\Shared\_Menu.cshtml" />
+    <Content Include="Areas\CustomerRosterItems\Views\CustomerRosterHome\Create.cshtml" />
+    <Content Include="Areas\CustomerRosterItems\Views\CustomerRosterHome\Delete.cshtml" />
+    <Content Include="Areas\CustomerRosterItems\Views\CustomerRosterHome\Details.cshtml" />
+    <Content Include="Areas\CustomerRosterItems\Views\CustomerRosterHome\Edit.cshtml" />
+    <Content Include="Areas\CustomerRosterItems\Views\CustomerRosterHome\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\dataTables.bootstrap5.js" />
     <Content Include="Scripts\dataTables.bootstrap5.min.js" />
@@ -336,6 +345,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Crops\Data\" />
+    <Folder Include="Areas\CustomerRosterItems\Data\" />
     <Folder Include="Areas\Customers\Data\" />
     <Folder Include="Areas\Equipment\Data\" />
     <Folder Include="Areas\InventoryItems\Data\" />

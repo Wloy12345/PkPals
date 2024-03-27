@@ -1,0 +1,40 @@
+﻿@model IEnumerable<PK_EF.CUSTOMERROSTER>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/CustomerRosterItems/Views/Shared/_Menu.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CUSTOMER.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FARM.Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CUSTOMER.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FARM.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CustomerRosterID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CustomerRosterID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CustomerRosterID })
+        </td>
+    </tr>
+}
+
+</table>

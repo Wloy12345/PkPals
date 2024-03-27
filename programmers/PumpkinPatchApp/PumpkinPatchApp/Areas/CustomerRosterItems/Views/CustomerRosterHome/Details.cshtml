@@ -1,0 +1,35 @@
+﻿@model PK_EF.CUSTOMERROSTER
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/CustomerRosterItems/Views/Shared/_Menu.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CUSTOMERROSTER</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CUSTOMER.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CUSTOMER.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FARM.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FARM.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CustomerRosterID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
