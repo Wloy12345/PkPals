@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\evaba\OneDrive\Desktop\Capstone 2.5</_PublishTargetUrl>
-    <History>True|2024-03-27T21:09:23.3460987Z;True|2024-03-26T21:53:05.0986294-04:00;True|2024-03-26T21:44:27.6603559-04:00;</History>
+    <History>True|2024-03-27T21:39:58.2246047Z;True|2024-03-27T17:09:23.3460987-04:00;True|2024-03-26T21:53:05.0986294-04:00;True|2024-03-26T21:44:27.6603559-04:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
@@ -22,7 +22,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>03/26/2024 20:45:28</publishTime>
     </File>
     <File Include="Areas/Crops/Views/CropsHome/Index.cshtml">
-      <publishTime>03/26/2024 22:11:22</publishTime>
+      <publishTime>03/27/2024 17:38:17</publishTime>
     </File>
     <File Include="Areas/Crops/Views/Shared/_CropHome.cshtml">
       <publishTime>03/26/2024 20:45:28</publishTime>
@@ -49,7 +49,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>03/26/2024 20:45:28</publishTime>
     </File>
     <File Include="Areas/Customers/Views/CustomerHome/Index.cshtml">
-      <publishTime>03/27/2024 10:35:40</publishTime>
+      <publishTime>03/27/2024 17:38:17</publishTime>
     </File>
     <File Include="Areas/Customers/Views/Shared/_CustomerHome.cshtml">
       <publishTime>03/26/2024 20:45:28</publishTime>
@@ -76,7 +76,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>03/26/2024 20:45:28</publishTime>
     </File>
     <File Include="Areas/Equipment/Views/EquipmentHome/Index.cshtml">
-      <publishTime>03/27/2024 10:35:40</publishTime>
+      <publishTime>03/27/2024 17:38:17</publishTime>
     </File>
     <File Include="Areas/Equipment/Views/Shared/_EquipmentHome.cshtml">
       <publishTime>03/26/2024 20:45:28</publishTime>
@@ -103,7 +103,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>03/26/2024 20:45:28</publishTime>
     </File>
     <File Include="Areas/InventoryItems/Views/InventoryHome/Index.cshtml">
-      <publishTime>03/27/2024 10:35:40</publishTime>
+      <publishTime>03/27/2024 17:38:17</publishTime>
     </File>
     <File Include="Areas/InventoryItems/Views/Shared/_Layout.cshtml">
       <publishTime>03/26/2024 20:45:28</publishTime>
@@ -136,7 +136,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>03/26/2024 20:45:28</publishTime>
     </File>
     <File Include="Areas/Supplies/Views/SupplyHome/Index.cshtml">
-      <publishTime>03/27/2024 10:35:40</publishTime>
+      <publishTime>03/27/2024 17:38:17</publishTime>
     </File>
     <File Include="Areas/Supplies/Views/web.config">
       <publishTime>03/26/2024 20:45:28</publishTime>
@@ -160,7 +160,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>03/26/2024 20:45:28</publishTime>
     </File>
     <File Include="Areas/SupplyCategoryItems/Views/SupplyCategoryHome/Index.cshtml">
-      <publishTime>03/27/2024 10:35:40</publishTime>
+      <publishTime>03/27/2024 17:38:17</publishTime>
     </File>
     <File Include="Areas/SupplyCategoryItems/Views/web.config">
       <publishTime>03/26/2024 20:45:28</publishTime>
@@ -235,10 +235,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>03/27/2024 17:09:21</publishTime>
     </File>
     <File Include="bin/PumpkinPatchApp.dll">
-      <publishTime>03/27/2024 17:09:21</publishTime>
+      <publishTime>03/27/2024 17:40:05</publishTime>
     </File>
     <File Include="bin/PumpkinPatchApp.pdb">
-      <publishTime>03/27/2024 17:09:21</publishTime>
+      <publishTime>03/27/2024 17:40:05</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>03/26/2024 20:45:29</publishTime>
@@ -508,7 +508,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>03/26/2024 20:45:28</publishTime>
     </File>
     <File Include="Content/custom.css">
-      <publishTime>03/26/2024 22:00:22</publishTime>
+      <publishTime>03/27/2024 17:38:17</publishTime>
     </File>
     <File Include="Content/dataTables.bootstrap5.css">
       <publishTime>03/26/2024 20:45:28</publishTime>
@@ -685,7 +685,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>03/26/2024 20:45:28</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>03/27/2024 10:35:39</publishTime>
+      <publishTime>03/27/2024 17:38:17</publishTime>
     </File>
     <File Include="Views/Manage/AddPhoneNumber.cshtml">
       <publishTime>03/26/2024 20:45:28</publishTime>
