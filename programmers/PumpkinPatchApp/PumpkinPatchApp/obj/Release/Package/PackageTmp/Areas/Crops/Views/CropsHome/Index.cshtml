@@ -9,10 +9,10 @@
 <h2>Index</h2>
 
 <p>
-    Hello pls work 
+    @Html.ActionLink("Create New", "Create")
 </p>
-@*@Html.ActionLink("Create New", "Create")
-    <table class="table" id="cropTable">
+
+    <table class="table table-striped table-info table-hover" id="cropTable">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Name)
@@ -44,7 +44,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.HarvestTechniques)
             </th>
-            <th></th>
+            
         </tr>
 
         @foreach (var item in Model)
@@ -88,4 +88,4 @@
             </tr>
         }
 
-    </table>*@
+    </table>

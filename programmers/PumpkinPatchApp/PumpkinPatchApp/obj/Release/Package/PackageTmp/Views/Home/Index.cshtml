@@ -29,10 +29,11 @@
             </style>
 
 
-            <img src="~/Images/corn.jpg" width="200"/>
+            <img src="~/Images/corn.jpg" width="200" />
             <p>
                 Pumpkin Patch gives you an easy to use index to organize the crops that you grow (or plan to grow) on your farm. Whether you grow 5 or 500 crops, let Pumpkin Patch do the work for you so you don't have to.
-            <p> <a href=" @Url.Action("Index", "CropsHome", new { area = "Crops", controller = "CropsHome" })" class="btn btn-success"> Go to My Crops &raquo; </a></p>
+            @*<p> <a href=" @Url.Action("Index", "CropsHome", new { area = "Crops", controller = "CropsHome" })" class="btn btn-success"> Go to My Crops &raquo; </a></p>*@
+           <p> @Html.ActionLink("Go To My Crops »", "Index", "CropsHome", new { area = "Crops" }, new { @class = "btn btn-success" })</p>
         </section>
         &nbsp; &nbsp; &nbsp; &nbsp;
 
