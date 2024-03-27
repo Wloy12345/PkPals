@@ -1,0 +1,43 @@
+﻿@model PK_EF.INVENTORY
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/InventoryItems/Views/Shared/_Menu.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>INVENTORY</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FARM.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FARM.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SUPPLy.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SUPPLy.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.InventoryID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

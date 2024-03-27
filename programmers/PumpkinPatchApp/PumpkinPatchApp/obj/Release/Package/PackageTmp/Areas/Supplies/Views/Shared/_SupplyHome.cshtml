@@ -1,16 +1,17 @@
 ﻿@{ ViewBag.Title = "Index";
-    //    Layout = "~/Areas/Views/Shared/_CropHome.cshtml";}
     Layout = "~/Views/Shared/_Layout.cshtml";}
 
 &nbsp;
 &nbsp;
 &nbsp;
 
-<h3 class="heading">Supply Interface</h3>
+<h3 class="heading">Inventory Menu Interface</h3>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-info" id="navbarColor01">
     <ul class="nav navbar-nav navbar-link navbar-static-top">
-        <li>@Html.ActionLink("Supply Home", "Index", "SUPPlies", new { area = "Supplies" })</li>
+        <li>@Html.ActionLink("Farm Inventory Menu", "Index", "InventoryHome", new { area = "InventoryItems" }, null)</li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <li>@Html.ActionLink("List Of Supplies", "Index", "SupplyHome", new { area = "Supplies" }, null)</li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <li>@Html.ActionLink("Supply Categories", "Index", "SupplyCategoryHome", new { area = "SupplyCategoryItems" }, null)</li>
     </ul>
 </nav>
 

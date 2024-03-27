@@ -1,0 +1,52 @@
+﻿@model IEnumerable<PK_EF.INVENTORY>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/InventoryItems/Views/Shared/_Menu.cshtml";
+}
+
+<h2>Inventory Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </th>
+        <th>
+            Farm Name
+        </th>
+        <th>
+            Supply Name
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.InventoryID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FARM.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SUPPLy.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.InventoryID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.InventoryID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.InventoryID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -23,10 +23,6 @@ button, a {
 }
 
 /*Apply CSS styles using :nth-child selector*/
-#cropTable tr :nth-child(odd) {
+#cropTable tr:nth-child(odd) {
     background-color: #164e45; /*Style for odd numbered items*/
-}
-
-#cropTable tr :nth-child(even) {
-    background-color: #ffffff; /* Style for even numbered items */
 }
