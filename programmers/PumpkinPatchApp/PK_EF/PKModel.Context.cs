@@ -25,6 +25,12 @@ namespace PK_EF
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<AspNetRoleClaim> AspNetRoleClaims { get; set; }
+        public virtual DbSet<AspNetRole> AspNetRoles { get; set; }
+        public virtual DbSet<AspNetUserClaim> AspNetUserClaims { get; set; }
+        public virtual DbSet<AspNetUserLogin> AspNetUserLogins { get; set; }
+        public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
+        public virtual DbSet<AspNetUserToken> AspNetUserTokens { get; set; }
         public virtual DbSet<CATEGORY> CATEGORies { get; set; }
         public virtual DbSet<CROP> CROPs { get; set; }
         public virtual DbSet<CROP_WATER_STATUS> CROP_WATER_STATUS { get; set; }
@@ -35,12 +41,9 @@ namespace PK_EF
         public virtual DbSet<FARM> FARMs { get; set; }
         public virtual DbSet<INVENTORY> INVENTORies { get; set; }
         public virtual DbSet<PLOT> PLOTs { get; set; }
-        public virtual DbSet<ROLE> ROLEs { get; set; }
         public virtual DbSet<SCHEDULE> SCHEDULEs { get; set; }
         public virtual DbSet<STATUS> STATUS { get; set; }
         public virtual DbSet<SUPPLy> SUPPLIES { get; set; }
-        public virtual DbSet<USER> USERs { get; set; }
         public virtual DbSet<USER_POSITION> USER_POSITION { get; set; }
-        public virtual DbSet<USERROLE> USERROLEs { get; set; }
     }
 }

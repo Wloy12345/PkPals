@@ -22,7 +22,6 @@ namespace PK_EF
     
         public int EmployeeID { get; set; }
         public int PositionID { get; set; }
-        public int UserID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string DateofBirth { get; set; }
@@ -30,7 +29,6 @@ namespace PK_EF
         public string Allergies { get; set; }
     
         public virtual USER_POSITION USER_POSITION { get; set; }
-        public virtual USER USER { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SCHEDULE> SCHEDULEs { get; set; }
     }

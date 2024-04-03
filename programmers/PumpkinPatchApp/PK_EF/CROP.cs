@@ -26,7 +26,7 @@ namespace PK_EF
         public string Type { get; set; }
         public int DaysTillHarvest { get; set; }
         public string Season { get; set; }
-        public int SelfLife { get; set; }
+        public int ShelfLife { get; set; }
         public decimal MarketValue { get; set; }
         public string WaterAmount { get; set; }
         public string CropRotationRecom { get; set; }

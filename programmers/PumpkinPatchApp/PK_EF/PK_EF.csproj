@@ -53,6 +53,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AspNetRole.cs">
+      <DependentUpon>PKModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetRoleClaim.cs">
+      <DependentUpon>PKModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUser.cs">
+      <DependentUpon>PKModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserClaim.cs">
+      <DependentUpon>PKModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserLogin.cs">
+      <DependentUpon>PKModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserToken.cs">
+      <DependentUpon>PKModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="CATEGORY.cs">
       <DependentUpon>PKModel.tt</DependentUpon>
     </Compile>
@@ -99,9 +117,6 @@
       <DependentUpon>PKModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ROLE.cs">
-      <DependentUpon>PKModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="SCHEDULE.cs">
       <DependentUpon>PKModel.tt</DependentUpon>
     </Compile>
@@ -109,12 +124,6 @@
       <DependentUpon>PKModel.tt</DependentUpon>
     </Compile>
     <Compile Include="SUPPLy.cs">
-      <DependentUpon>PKModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="USER.cs">
-      <DependentUpon>PKModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="USERROLE.cs">
       <DependentUpon>PKModel.tt</DependentUpon>
     </Compile>
     <Compile Include="USER_POSITION.cs">
