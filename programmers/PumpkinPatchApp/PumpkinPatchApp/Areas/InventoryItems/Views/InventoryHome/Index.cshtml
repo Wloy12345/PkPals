@@ -13,9 +13,6 @@
 <table class="table table-striped table-info table-hover">
     <tr>
         <th>
-            ID
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.Quantity)
         </th>
         <th>
@@ -29,9 +26,6 @@
 
 @foreach (var item in Model) {
     <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.InventoryID)
-        </td>
         <td>
             @Html.DisplayFor(modelItem => item.Quantity)
         </td>
