@@ -53,11 +53,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.SelfLife)
+            @Html.DisplayNameFor(model => model.ShelfLife)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.SelfLife)
+            @Html.DisplayFor(model => model.ShelfLife)
         </dd>
 
         <dt>
@@ -95,6 +95,8 @@
     </dl>
 </div>
 <p>
+
     @Html.ActionLink("Edit", "Edit", new { id = Model.CropID }) |
+    @Html.ActionLink("Delete", "Delete", new { id = Model.CropID }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
