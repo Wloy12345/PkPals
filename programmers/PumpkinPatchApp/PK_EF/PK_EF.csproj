@@ -92,6 +92,7 @@
     <Compile Include="EQUIPMENT.cs">
       <DependentUpon>PKModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Extentions\Metadata.cs" />
     <Compile Include="FARM.cs">
       <DependentUpon>PKModel.tt</DependentUpon>
     </Compile>
