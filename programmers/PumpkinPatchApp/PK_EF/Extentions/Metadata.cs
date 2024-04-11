@@ -203,8 +203,8 @@ namespace PK_EF
             [Display(Name = "Quantity")]
             public string Quantity { get; set; }
         }
-    }*/
-    [MetadataType(typeof(PLOT.PlotMetadata))]
+    
+    [(typeof(PLOT.PlotMetadata))]
 
     public partial class PLOT
 
@@ -224,7 +224,7 @@ namespace PK_EF
             public DateTime DatePlanted { get; set; }
 
         }
-    }
+    }*/
     [MetadataType(typeof(SCHEDULE.SchedMetadata))]
 
     public partial class SCHEDULE

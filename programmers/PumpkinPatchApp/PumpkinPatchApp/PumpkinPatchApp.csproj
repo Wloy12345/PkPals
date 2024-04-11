@@ -178,7 +178,6 @@
     <Compile Include="Areas\Equipment\EquipmentAreaRegistration.cs" />
     <Compile Include="Areas\InventoryItems\Controllers\InventoryHomeController.cs" />
     <Compile Include="Areas\InventoryItems\InventoryItemsAreaRegistration.cs" />
-    <Compile Include="Areas\Plots\Controllers\PlotHomeController.cs" />
     <Compile Include="Areas\Plots\PlotsAreaRegistration.cs" />
     <Compile Include="Areas\Supplies\Controllers\SupplyHomeController.cs" />
     <Compile Include="Areas\Supplies\SuppliesAreaRegistration.cs" />
@@ -302,11 +301,6 @@
     <Content Include="Areas\WaterStatusIndex\Views\CropWaterStatusHome\Edit.cshtml" />
     <Content Include="Areas\WaterStatusIndex\Views\CropWaterStatusHome\Index.cshtml" />
     <Content Include="Areas\Plots\Views\web.config" />
-    <Content Include="Areas\Plots\Views\PlotHome\Create.cshtml" />
-    <Content Include="Areas\Plots\Views\PlotHome\Delete.cshtml" />
-    <Content Include="Areas\Plots\Views\PlotHome\Details.cshtml" />
-    <Content Include="Areas\Plots\Views\PlotHome\Edit.cshtml" />
-    <Content Include="Areas\Plots\Views\PlotHome\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\dataTables.bootstrap5.js" />
     <Content Include="Scripts\dataTables.bootstrap5.min.js" />
@@ -365,6 +359,7 @@
     <Folder Include="Areas\Customers\Data\" />
     <Folder Include="Areas\Equipment\Data\" />
     <Folder Include="Areas\InventoryItems\Data\" />
+    <Folder Include="Areas\Plots\Controllers\" />
     <Folder Include="Areas\Plots\Data\" />
     <Folder Include="Areas\Plots\Views\Shared\" />
     <Folder Include="Areas\Supplies\Data\" />

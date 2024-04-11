@@ -6,11 +6,14 @@
 &nbsp;
 &nbsp;
 
-<h3 class="heading">Crops Menu</h3>
+<h3 class="heading">Menu</h3>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-info" id="navbarColor01">
     <ul class="nav navbar-nav navbar-link navbar-static-top">
-        <li>@Html.ActionLink("Crop Home", "Index", "CropHome", new { area = "Crops" })</li>
+        &nbsp;&nbsp;&nbsp;
+        <li>@Html.ActionLink("My Crops", "Index", "CropsHome", new { area = "Crops" }, new { @class = "btn btn-primary" })</li> &nbsp;&nbsp;&nbsp;
+        <li>@Html.ActionLink("My Plots", "Index", "CropsHome", new { area = "Crops" }, new { @class = "btn btn-primary" })</li>&nbsp;&nbsp;&nbsp;
+        <li>@Html.ActionLink("Water Status", "Index", "CropsHome", new { area = "Crops" }, new { @class = "btn btn-primary" })</li>&nbsp;&nbsp;&nbsp;
     </ul>
 </nav>
 
