@@ -22,3 +22,16 @@ button, a {
     font-family: lemonmilk-regular;
 }
 
+.successLink {
+    color: rgb(21, 90, 3)
+}
+.failureLink {
+    color: rgb(255, 0, 0)
+}
+.partialSLink {
+    color: #ffc107
+}
+partialFLink{
+    color: rgb(255, 106, 0)
+}
+

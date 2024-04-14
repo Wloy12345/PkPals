@@ -7,6 +7,12 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using PK_EF;
+using iText.Kernel.Pdf;
+using iText.Layout;
+using iText.Layout.Element;
+using iText.Layout.Properties;
+using System.IO;
+
 
 namespace PumpkinPatchApp.Areas.Crops.Controllers
 {
@@ -123,5 +129,16 @@ namespace PumpkinPatchApp.Areas.Crops.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult GeneratePDF()
+        {
+            // Retrieve table data (already populated)
+            var tableData = db.CROPs.ToList(); // Replace with your actual data retrieval logic
+
+            // Provide the user with a link to download the PDF
+            return RedirectToAction("Index");
+        }
+
+
     }
 }

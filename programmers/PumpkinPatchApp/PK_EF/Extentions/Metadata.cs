@@ -121,7 +121,7 @@ namespace PK_EF
             public string LastName { get; set; }
 
         }
-    }*/
+    }
     [MetadataType(typeof(EMPLOYEE.EmpMetadata))]
 
     public partial class EMPLOYEE
@@ -139,7 +139,7 @@ namespace PK_EF
             public string LastName { get; set; }
 
             [Display(Name = "Date of Birth")]
-            public string DateofBorth { get; set; }
+            public string DateofBirth { get; set; }
 
             [Display(Name = "Certifications")]
             public string Certifications { get; set; }
@@ -148,7 +148,7 @@ namespace PK_EF
             public string Allergies { get; set; }
 
         }
-    }
+    }*/
 
     /*[MetadataType(typeof(EQUIPMENT.EquipMetadata))]
 
@@ -202,9 +202,9 @@ namespace PK_EF
 
             [Display(Name = "Quantity")]
             public string Quantity { get; set; }
-        }
-    
-    [(typeof(PLOT.PlotMetadata))]
+        }*/
+
+    [MetadataType (typeof(PLOT.PlotMetadata))]
 
     public partial class PLOT
 
@@ -221,10 +221,10 @@ namespace PK_EF
             public string History { get; set; }
 
             [Display(Name = "Date Planted")]
-            public DateTime DatePlanted { get; set; }
+            public DateTime DatePlantec { get; set; }
 
         }
-    }*/
+    }
     [MetadataType(typeof(SCHEDULE.SchedMetadata))]
 
     public partial class SCHEDULE
