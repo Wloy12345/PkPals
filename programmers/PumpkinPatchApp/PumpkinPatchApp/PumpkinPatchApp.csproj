@@ -451,7 +451,6 @@
     <Folder Include="Areas\WaterStatusIndex\Data\" />
     <Folder Include="Areas\WaterStatusIndex\Views\Shared\" />
     <Folder Include="PDF_Data\" />
-    <Folder Include="Views\Plots\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />

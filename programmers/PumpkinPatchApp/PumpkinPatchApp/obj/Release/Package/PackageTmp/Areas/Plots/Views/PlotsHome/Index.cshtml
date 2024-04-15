@@ -1,0 +1,85 @@
+﻿@model IEnumerable<PK_EF.PLOT>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Crops/Views/Shared/_CropHome.cshtml";
+}
+<!DOCTYPE html>
+<head>
+    <script src="~/Scripts/dataTables.min.js" defer></script>
+    <script src="~/Scripts/dataTables.bootstrap5.min.js" defer></script>
+</head>
+<body>
+    <h2>Plots Home</h2>
+
+    <p>
+        @Html.ActionLink("Add Plot »", "Create", null, new { @class = "btn btn-success" })
+    </p>
+    <table class="table table-hover table-info table-striped" id="plotTable">
+        <thead>
+            <tr>
+                <th>
+                   @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Size)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.History)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DatePlantec)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CROP.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FARM.Name)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name) 
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Size)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.History)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DatePlantec)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CROP.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FARM.Name)
+                    </td>
+                    <td>
+                        
+                        @Html.ActionLink("Details", "Details", new { id = item.PlotID })
+                      
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+    <script>
+        $(document).ready(function () {
+            $('#plotTable').DataTable(); // Initialize DataTables for your table (replace 'empTable' with your table ID)
+        });
+    </script>
+</body>
