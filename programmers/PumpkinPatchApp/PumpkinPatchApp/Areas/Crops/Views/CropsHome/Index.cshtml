@@ -27,6 +27,7 @@
     </p>
 
 
+
     <table class="table table-striped table-info table-hover" id="cropTable">
         <thead>
             <tr>
@@ -112,14 +113,14 @@
 
     </table>
 
-    <p>
-
-        To change the order of the table, click on the headers for easy sorting.
-
-    </p>
+    <div style="text-align:center;">
+        <p>
+            To change the order of the table, click on the headers for easy sorting.
+        </p>
+    </div>
 
     <button id="exportButton">Export Table</button>
-    
+
     <style>
         a {
             color: #165E45;
@@ -129,8 +130,7 @@
     <script>
         $(document).ready(function () {
             $('#cropTable').DataTable(); // Initialize DataTables for your table (replace 'empTable' with your table ID)
-        });
-        
+        }
     </script>
 </body>
 </html>
