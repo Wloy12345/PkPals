@@ -3,43 +3,76 @@
 }
 
 @model PK_EF.Extentions.ContactModels
+
+<!DOCTYPE html>
 <html>
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="~/Content/styles.css" rel="stylesheet" />
 </head>
+
 <body>
     <h1>Contact Us</h1>
+    
+    <div class="comment">
+        <form autocomplete="off">
+            @using (Html.BeginForm())
+            {
+                @Html.ValidationSummary(true)
 
-    @using (Html.BeginForm())
-    {
-        @Html.ValidationSummary(true)
+                <div class="form-group" id="name">
+                    @Html.LabelFor(model => model.Name, "First Name:")
+                    @Html.EditorFor(model => model.Name)
+                    @Html.ValidationMessageFor(model => model.Name)
+                </div>
+                <div class="form-group" id="email">
+                    @Html.LabelFor(model => model.Email, "Email:")
+                    @Html.EditorFor(model => model.Email)
+                    @Html.ValidationMessageFor(model => model.Email)
+                </div>
 
-        <div class="row">
-            @Html.LabelFor(model => model.FirstName, "First Name:")
-            @Html.EditorFor(model => model.FirstName)
-            @Html.ValidationMessageFor(model => model.FirstName)
-        </div>
-        <div class="row">
-            @Html.LabelFor(model => model.Email, "Email:")
-            @Html.EditorFor(model => model.Email)
-            @Html.ValidationMessageFor(model => model.Email)
-        </div>
-        <div class="row">
-            @Html.LabelFor(model => model.Subject, "Subject:")
-            @Html.EditorFor(model => model.Subject)
-            @Html.ValidationMessageFor(model => model.Subject)
-        </div>
-        <div class="row">
-            @Html.LabelFor(model => model.Message, "Message:")
-            @Html.EditorFor(model => model.Message)
-            @Html.ValidationMessageFor(model => model.Message)
-        </div>
-        <!-- Repeat similar code for other form fields (Subject, Email, Message) -->
+                <div class="form-group" id="form">
+                    @Html.LabelFor(model => model.Comment, "Message:")
+                    @Html.EditorFor(model => model.Comment)
+                    @Html.ValidationMessageFor(model => model.Comment)
+                </div>
+                <!-- Repeat similar code for other form fields (Subject, Email, Message) -->
 
-        <div class="row">
-            <input type="submit" value="Submit" />
-            <input type="reset" value="Reset" />
-        </div>
-    }
+                <div>
+                    <input type="submit" value="Submit" class="btn btn-success" />
+
+                    <input type="reset" value="Reset" class="btn btn-primary" />
+                </div>
+
+            }
+        </form>
+    </div>
+    <script>
+        const fName = document.getElementById('name');
+        const fEmail = document.getElementById('email');
+        const form = document.getElementById('form');
+        const error = document.getElementById('error');
+
+        form.addEventListener('submit', (event) => {
+            let messages = []
+            if (fName.value === '') {
+                messages.push('<p class="sError"> Name is required </p>')
+            }
+
+            if (fEmail.value === '') {
+                messages.push('<p class="sError">Email is required </p>')
+            }
+
+            if (messages.length > 0) {
+                event.preventDefault();
+                error.innerHTML = messages.join('')
+            }
+        })
+    </script>
+
 </body>
 </html>
 

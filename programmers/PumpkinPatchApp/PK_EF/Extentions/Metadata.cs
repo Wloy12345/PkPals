@@ -27,7 +27,7 @@ namespace PK_EF
                 [Display(Name = "Type of Crop")]
                 public string Type { get; set; }
 
-                [Display(Name = "Days Unill Harvest")]
+                [Display(Name = "Days Until Harvest")]
                 public int DaysTillHarvest { get; set; }
 
                 [Display(Name = "Growing Season")]

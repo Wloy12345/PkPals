@@ -44,7 +44,7 @@ namespace PumpkinPatchApp.Controllers
 
                     // Set up your email details (sender and recipient addresses)
                     msg.From = new MailAddress("sender@gmail.com");
-                    msg.To.Add("recipient@gmail.com");
+                    msg.To.Add("evabalkarli@gmail.com");
                     msg.Subject = "Contact Us";
 
                     // Configure SMTP settings (e.g., credentials, port, SSL)
@@ -54,13 +54,13 @@ namespace PumpkinPatchApp.Controllers
 
                     // Construct the email body
                     StringBuilder sb = new StringBuilder();
-                    sb.Append("First name: " + c.FirstName);
+                    sb.Append("First name: " + c.Name);
                     sb.Append(Environment.NewLine);
-                    sb.Append("Subject: " + c.Subject);
-                    sb.Append(Environment.NewLine);
+                   
+                 
                     sb.Append("Email: " + c.Email);
                     sb.Append(Environment.NewLine);
-                    sb.Append("Comments: " + c.Message);
+                    sb.Append("Comments: " + c.Comment);
                     msg.Body = sb.ToString();
 
                     // Send the email
