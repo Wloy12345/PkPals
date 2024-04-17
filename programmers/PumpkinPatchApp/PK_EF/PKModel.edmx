@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="PKPalsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="PKPalsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="AspNetRoleClaims">
           <Key>
             <PropertyRef Name="Id" />
@@ -559,104 +559,11 @@
             <End Role="AspNetUserTokens" EntitySet="AspNetUserTokens" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="PKPalsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="PKPalsEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="AspNetRoleClaims" EntityType="PKPalsModel.AspNetRoleClaim" />
-          <EntitySet Name="AspNetRoles" EntityType="PKPalsModel.AspNetRole" />
-          <EntitySet Name="AspNetUserClaims" EntityType="PKPalsModel.AspNetUserClaim" />
-          <EntitySet Name="AspNetUserLogins" EntityType="PKPalsModel.AspNetUserLogin" />
-          <EntitySet Name="AspNetUsers" EntityType="PKPalsModel.AspNetUser" />
-          <EntitySet Name="AspNetUserTokens" EntityType="PKPalsModel.AspNetUserToken" />
-          <EntitySet Name="CATEGORies" EntityType="PKPalsModel.CATEGORY" />
-          <EntitySet Name="CROPs" EntityType="PKPalsModel.CROP" />
-          <EntitySet Name="CROP_WATER_STATUS" EntityType="PKPalsModel.CROP_WATER_STATUS" />
-          <EntitySet Name="CUSTOMERs" EntityType="PKPalsModel.CUSTOMER" />
-          <EntitySet Name="CUSTOMERROSTERs" EntityType="PKPalsModel.CUSTOMERROSTER" />
-          <EntitySet Name="EMPLOYEEs" EntityType="PKPalsModel.EMPLOYEE" />
-          <EntitySet Name="EQUIPMENTs" EntityType="PKPalsModel.EQUIPMENT" />
-          <EntitySet Name="FARMs" EntityType="PKPalsModel.FARM" />
-          <EntitySet Name="INVENTORies" EntityType="PKPalsModel.INVENTORY" />
-          <EntitySet Name="PLOTs" EntityType="PKPalsModel.PLOT" />
-          <EntitySet Name="SCHEDULEs" EntityType="PKPalsModel.SCHEDULE" />
-          <EntitySet Name="STATUS" EntityType="PKPalsModel.STATUS" />
-          <EntitySet Name="SUPPLIES" EntityType="PKPalsModel.SUPPLy" />
-          <EntitySet Name="USER_POSITION" EntityType="PKPalsModel.USER_POSITION" />
-          <AssociationSet Name="FK_AspNetRoleClaims_AspNetRoles_RoleId" Association="PKPalsModel.FK_AspNetRoleClaims_AspNetRoles_RoleId">
-            <End Role="AspNetRole" EntitySet="AspNetRoles" />
-            <End Role="AspNetRoleClaim" EntitySet="AspNetRoleClaims" />
-          </AssociationSet>
-          <AssociationSet Name="FK_AspNetUserClaims_AspNetUsers_UserId" Association="PKPalsModel.FK_AspNetUserClaims_AspNetUsers_UserId">
-            <End Role="AspNetUser" EntitySet="AspNetUsers" />
-            <End Role="AspNetUserClaim" EntitySet="AspNetUserClaims" />
-          </AssociationSet>
-          <AssociationSet Name="FK_AspNetUserLogins_AspNetUsers_UserId" Association="PKPalsModel.FK_AspNetUserLogins_AspNetUsers_UserId">
-            <End Role="AspNetUser" EntitySet="AspNetUsers" />
-            <End Role="AspNetUserLogin" EntitySet="AspNetUserLogins" />
-          </AssociationSet>
-          <AssociationSet Name="FK_AspNetUserTokens_AspNetUsers_UserId" Association="PKPalsModel.FK_AspNetUserTokens_AspNetUsers_UserId">
-            <End Role="AspNetUser" EntitySet="AspNetUsers" />
-            <End Role="AspNetUserToken" EntitySet="AspNetUserTokens" />
-          </AssociationSet>
-          <AssociationSet Name="FK_14" Association="PKPalsModel.FK_14">
-            <End Role="CATEGORY" EntitySet="CATEGORies" />
-            <End Role="SUPPLy" EntitySet="SUPPLIES" />
-          </AssociationSet>
-          <AssociationSet Name="FK_4" Association="PKPalsModel.FK_4">
-            <End Role="CROP" EntitySet="CROPs" />
-            <End Role="PLOT" EntitySet="PLOTs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_9" Association="PKPalsModel.FK_9">
-            <End Role="CROP_WATER_STATUS" EntitySet="CROP_WATER_STATUS" />
-            <End Role="PLOT" EntitySet="PLOTs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_15" Association="PKPalsModel.FK_15">
-            <End Role="CUSTOMER" EntitySet="CUSTOMERs" />
-            <End Role="CUSTOMERROSTER" EntitySet="CUSTOMERROSTERs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_14_1" Association="PKPalsModel.FK_14_1">
-            <End Role="FARM" EntitySet="FARMs" />
-            <End Role="CUSTOMERROSTER" EntitySet="CUSTOMERROSTERs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_13" Association="PKPalsModel.FK_13">
-            <End Role="USER_POSITION" EntitySet="USER_POSITION" />
-            <End Role="EMPLOYEE" EntitySet="EMPLOYEEs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_5" Association="PKPalsModel.FK_5">
-            <End Role="EMPLOYEE" EntitySet="EMPLOYEEs" />
-            <End Role="SCHEDULE" EntitySet="SCHEDULEs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_15_1" Association="PKPalsModel.FK_15_1">
-            <End Role="FARM" EntitySet="FARMs" />
-            <End Role="EQUIPMENT" EntitySet="EQUIPMENTs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_6" Association="PKPalsModel.FK_6">
-            <End Role="EQUIPMENT" EntitySet="EQUIPMENTs" />
-            <End Role="SCHEDULE" EntitySet="SCHEDULEs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_8" Association="PKPalsModel.FK_8">
-            <End Role="STATUS" EntitySet="STATUS" />
-            <End Role="EQUIPMENT" EntitySet="EQUIPMENTs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_12" Association="PKPalsModel.FK_12">
-            <End Role="FARM" EntitySet="FARMs" />
-            <End Role="INVENTORY" EntitySet="INVENTORies" />
-          </AssociationSet>
-          <AssociationSet Name="FK_3" Association="PKPalsModel.FK_3">
-            <End Role="FARM" EntitySet="FARMs" />
-            <End Role="PLOT" EntitySet="PLOTs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_11" Association="PKPalsModel.FK_11">
-            <End Role="SUPPLy" EntitySet="SUPPLIES" />
-            <End Role="INVENTORY" EntitySet="INVENTORies" />
-          </AssociationSet>
-          <AssociationSet Name="AspNetUserRoles" Association="PKPalsModel.AspNetUserRoles">
-            <End Role="AspNetRole" EntitySet="AspNetRoles" />
-            <End Role="AspNetUser" EntitySet="AspNetUsers" />
-          </AssociationSet>
-        </EntityContainer>
         <EntityType Name="AspNetRoleClaim">
           <Key>
             <PropertyRef Name="Id" />
@@ -664,19 +571,19 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="RoleId" Type="String" Nullable="false" MaxLength="450" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="AspNetRole" Relationship="PKPalsModel.FK_AspNetRoleClaims_AspNetRoles_RoleId" FromRole="AspNetRoleClaim" ToRole="AspNetRole" />
+          <Property Name="RoleId" Type="String" MaxLength="450" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="AspNetRole" Relationship="Self.FK_AspNetRoleClaims_AspNetRoles_RoleId" FromRole="AspNetRoleClaims" ToRole="AspNetRoles" />
         </EntityType>
         <EntityType Name="AspNetRole">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="String" Nullable="false" MaxLength="450" FixedLength="false" Unicode="true" />
+          <Property Name="Id" Type="String" MaxLength="450" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="ConcurrencyStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
           <Property Name="NormalizedName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="AspNetRoleClaims" Relationship="PKPalsModel.FK_AspNetRoleClaims_AspNetRoles_RoleId" FromRole="AspNetRole" ToRole="AspNetRoleClaim" />
-          <NavigationProperty Name="AspNetUsers" Relationship="PKPalsModel.AspNetUserRoles" FromRole="AspNetRole" ToRole="AspNetUser" />
+          <NavigationProperty Name="AspNetRoleClaims" Relationship="Self.FK_AspNetRoleClaims_AspNetRoles_RoleId" FromRole="AspNetRoles" ToRole="AspNetRoleClaims" />
+          <NavigationProperty Name="AspNetUsers" Relationship="Self.AspNetUserRoles" FromRole="AspNetRoles" ToRole="AspNetUsers" />
         </EntityType>
         <EntityType Name="AspNetUserClaim">
           <Key>
@@ -685,25 +592,25 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="UserId" Type="String" Nullable="false" MaxLength="450" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="AspNetUser" Relationship="PKPalsModel.FK_AspNetUserClaims_AspNetUsers_UserId" FromRole="AspNetUserClaim" ToRole="AspNetUser" />
+          <Property Name="UserId" Type="String" MaxLength="450" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="AspNetUser" Relationship="Self.FK_AspNetUserClaims_AspNetUsers_UserId" FromRole="AspNetUserClaims" ToRole="AspNetUsers" />
         </EntityType>
         <EntityType Name="AspNetUserLogin">
           <Key>
             <PropertyRef Name="LoginProvider" />
             <PropertyRef Name="ProviderKey" />
           </Key>
-          <Property Name="LoginProvider" Type="String" Nullable="false" MaxLength="450" FixedLength="false" Unicode="true" />
-          <Property Name="ProviderKey" Type="String" Nullable="false" MaxLength="450" FixedLength="false" Unicode="true" />
+          <Property Name="LoginProvider" Type="String" MaxLength="450" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ProviderKey" Type="String" MaxLength="450" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="ProviderDisplayName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="UserId" Type="String" Nullable="false" MaxLength="450" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="AspNetUser" Relationship="PKPalsModel.FK_AspNetUserLogins_AspNetUsers_UserId" FromRole="AspNetUserLogin" ToRole="AspNetUser" />
+          <Property Name="UserId" Type="String" MaxLength="450" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="AspNetUser" Relationship="Self.FK_AspNetUserLogins_AspNetUsers_UserId" FromRole="AspNetUserLogins" ToRole="AspNetUsers" />
         </EntityType>
         <EntityType Name="AspNetUser">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="String" Nullable="false" MaxLength="450" FixedLength="false" Unicode="true" />
+          <Property Name="Id" Type="String" MaxLength="450" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
           <Property Name="ConcurrencyStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
@@ -719,10 +626,10 @@
           <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
           <Property Name="UserName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
           <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="AspNetUserClaims" Relationship="PKPalsModel.FK_AspNetUserClaims_AspNetUsers_UserId" FromRole="AspNetUser" ToRole="AspNetUserClaim" />
-          <NavigationProperty Name="AspNetUserLogins" Relationship="PKPalsModel.FK_AspNetUserLogins_AspNetUsers_UserId" FromRole="AspNetUser" ToRole="AspNetUserLogin" />
-          <NavigationProperty Name="AspNetUserTokens" Relationship="PKPalsModel.FK_AspNetUserTokens_AspNetUsers_UserId" FromRole="AspNetUser" ToRole="AspNetUserToken" />
-          <NavigationProperty Name="AspNetRoles" Relationship="PKPalsModel.AspNetUserRoles" FromRole="AspNetUser" ToRole="AspNetRole" />
+          <NavigationProperty Name="AspNetUserClaims" Relationship="Self.FK_AspNetUserClaims_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserClaims" />
+          <NavigationProperty Name="AspNetUserLogins" Relationship="Self.FK_AspNetUserLogins_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserLogins" />
+          <NavigationProperty Name="AspNetUserTokens" Relationship="Self.FK_AspNetUserTokens_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserTokens" />
+          <NavigationProperty Name="AspNetRoles" Relationship="Self.AspNetUserRoles" FromRole="AspNetUsers" ToRole="AspNetRoles" />
         </EntityType>
         <EntityType Name="AspNetUserToken">
           <Key>
@@ -730,55 +637,55 @@
             <PropertyRef Name="LoginProvider" />
             <PropertyRef Name="Name" />
           </Key>
-          <Property Name="UserId" Type="String" Nullable="false" MaxLength="450" FixedLength="false" Unicode="true" />
-          <Property Name="LoginProvider" Type="String" Nullable="false" MaxLength="450" FixedLength="false" Unicode="true" />
-          <Property Name="Name" Type="String" Nullable="false" MaxLength="450" FixedLength="false" Unicode="true" />
+          <Property Name="UserId" Type="String" MaxLength="450" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LoginProvider" Type="String" MaxLength="450" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="450" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Value" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="AspNetUser" Relationship="PKPalsModel.FK_AspNetUserTokens_AspNetUsers_UserId" FromRole="AspNetUserToken" ToRole="AspNetUser" />
+          <NavigationProperty Name="AspNetUser" Relationship="Self.FK_AspNetUserTokens_AspNetUsers_UserId" FromRole="AspNetUserTokens" ToRole="AspNetUsers" />
         </EntityType>
         <EntityType Name="CATEGORY">
           <Key>
             <PropertyRef Name="CategoryID" />
           </Key>
           <Property Name="CategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="SUPPLIES" Relationship="PKPalsModel.FK_14" FromRole="CATEGORY" ToRole="SUPPLy" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="SUPPLIES" Relationship="Self.FK_14" FromRole="CATEGORY" ToRole="SUPPLIES" />
         </EntityType>
         <EntityType Name="CROP">
           <Key>
             <PropertyRef Name="CropID" />
           </Key>
           <Property Name="CropID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Description" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
-          <Property Name="Type" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="DaysTillHarvest" Type="Int32" Nullable="false" />
-          <Property Name="Season" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Season" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ShelfLife" Type="Int32" Nullable="false" />
-          <Property Name="MarketValue" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
-          <Property Name="WaterAmount" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
-          <Property Name="CropRotationRecom" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
-          <Property Name="HarvestTechniques" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="PLOTs" Relationship="PKPalsModel.FK_4" FromRole="CROP" ToRole="PLOT" />
+          <Property Name="MarketValue" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="WaterAmount" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CropRotationRecom" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HarvestTechniques" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="PLOTs" Relationship="Self.FK_4" FromRole="CROP" ToRole="PLOT" />
         </EntityType>
         <EntityType Name="CROP_WATER_STATUS">
           <Key>
             <PropertyRef Name="CropWaterStatusID" />
           </Key>
           <Property Name="CropWaterStatusID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="PLOTs" Relationship="PKPalsModel.FK_9" FromRole="CROP_WATER_STATUS" ToRole="PLOT" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="PLOTs" Relationship="Self.FK_9" FromRole="CROP_WATER_STATUS" ToRole="PLOT" />
         </EntityType>
         <EntityType Name="CUSTOMER">
           <Key>
             <PropertyRef Name="CustomerID" />
           </Key>
           <Property Name="CustomerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Phone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="CUSTOMERROSTERs" Relationship="PKPalsModel.FK_15" FromRole="CUSTOMER" ToRole="CUSTOMERROSTER" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="CUSTOMERROSTERs" Relationship="Self.FK_15" FromRole="CUSTOMER" ToRole="CUSTOMERROSTER" />
         </EntityType>
         <EntityType Name="CUSTOMERROSTER">
           <Key>
@@ -787,8 +694,8 @@
           <Property Name="CustomerRosterID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CustomerID" Type="Int32" Nullable="false" />
           <Property Name="FarmID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="CUSTOMER" Relationship="PKPalsModel.FK_15" FromRole="CUSTOMERROSTER" ToRole="CUSTOMER" />
-          <NavigationProperty Name="FARM" Relationship="PKPalsModel.FK_14_1" FromRole="CUSTOMERROSTER" ToRole="FARM" />
+          <NavigationProperty Name="CUSTOMER" Relationship="Self.FK_15" FromRole="CUSTOMERROSTER" ToRole="CUSTOMER" />
+          <NavigationProperty Name="FARM" Relationship="Self.FK_14_1" FromRole="CUSTOMERROSTER" ToRole="FARM" />
         </EntityType>
         <EntityType Name="EMPLOYEE">
           <Key>
@@ -796,13 +703,13 @@
           </Key>
           <Property Name="EmployeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="PositionID" Type="Int32" Nullable="false" />
-          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="DateofBirth" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Certifications" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
-          <Property Name="Allergies" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="USER_POSITION" Relationship="PKPalsModel.FK_13" FromRole="EMPLOYEE" ToRole="USER_POSITION" />
-          <NavigationProperty Name="SCHEDULEs" Relationship="PKPalsModel.FK_5" FromRole="EMPLOYEE" ToRole="SCHEDULE" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DateofBirth" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Certifications" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Allergies" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="USER_POSITION" Relationship="Self.FK_13" FromRole="EMPLOYEE" ToRole="USER_POSITION" />
+          <NavigationProperty Name="SCHEDULEs" Relationship="Self.FK_5" FromRole="EMPLOYEE" ToRole="SCHEDULE" />
         </EntityType>
         <EntityType Name="EQUIPMENT">
           <Key>
@@ -811,28 +718,28 @@
           <Property Name="EquipmentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="FarmID" Type="Int32" Nullable="false" />
           <Property Name="StatusID" Type="Int32" Nullable="false" />
-          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Type" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Description" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="FARM" Relationship="PKPalsModel.FK_15_1" FromRole="EQUIPMENT" ToRole="FARM" />
-          <NavigationProperty Name="SCHEDULEs" Relationship="PKPalsModel.FK_6" FromRole="EQUIPMENT" ToRole="SCHEDULE" />
-          <NavigationProperty Name="STATUS" Relationship="PKPalsModel.FK_8" FromRole="EQUIPMENT" ToRole="STATUS" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="FARM" Relationship="Self.FK_15_1" FromRole="EQUIPMENT" ToRole="FARM" />
+          <NavigationProperty Name="SCHEDULEs" Relationship="Self.FK_6" FromRole="EQUIPMENT" ToRole="SCHEDULE" />
+          <NavigationProperty Name="STATUS" Relationship="Self.FK_8" FromRole="EQUIPMENT" ToRole="STATUS" />
         </EntityType>
         <EntityType Name="FARM">
           <Key>
             <PropertyRef Name="FarmID" />
           </Key>
           <Property Name="FarmID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Size" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Address" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="State" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
-          <Property Name="City" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Size" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="State" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ZipCode" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="CUSTOMERROSTERs" Relationship="PKPalsModel.FK_14_1" FromRole="FARM" ToRole="CUSTOMERROSTER" />
-          <NavigationProperty Name="EQUIPMENTs" Relationship="PKPalsModel.FK_15_1" FromRole="FARM" ToRole="EQUIPMENT" />
-          <NavigationProperty Name="INVENTORies" Relationship="PKPalsModel.FK_12" FromRole="FARM" ToRole="INVENTORY" />
-          <NavigationProperty Name="PLOTs" Relationship="PKPalsModel.FK_3" FromRole="FARM" ToRole="PLOT" />
+          <NavigationProperty Name="CUSTOMERROSTERs" Relationship="Self.FK_14_1" FromRole="FARM" ToRole="CUSTOMERROSTER" />
+          <NavigationProperty Name="EQUIPMENTs" Relationship="Self.FK_15_1" FromRole="FARM" ToRole="EQUIPMENT" />
+          <NavigationProperty Name="INVENTORies" Relationship="Self.FK_12" FromRole="FARM" ToRole="INVENTORY" />
+          <NavigationProperty Name="PLOTs" Relationship="Self.FK_3" FromRole="FARM" ToRole="PLOT" />
         </EntityType>
         <EntityType Name="INVENTORY">
           <Key>
@@ -842,8 +749,8 @@
           <Property Name="FarmID" Type="Int32" Nullable="false" />
           <Property Name="SuppliesID" Type="Int32" Nullable="false" />
           <Property Name="Quantity" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="FARM" Relationship="PKPalsModel.FK_12" FromRole="INVENTORY" ToRole="FARM" />
-          <NavigationProperty Name="SUPPLy" Relationship="PKPalsModel.FK_11" FromRole="INVENTORY" ToRole="SUPPLy" />
+          <NavigationProperty Name="FARM" Relationship="Self.FK_12" FromRole="INVENTORY" ToRole="FARM" />
+          <NavigationProperty Name="SUPPLy" Relationship="Self.FK_11" FromRole="INVENTORY" ToRole="SUPPLIES" />
         </EntityType>
         <EntityType Name="PLOT">
           <Key>
@@ -853,14 +760,14 @@
           <Property Name="FarmID" Type="Int32" Nullable="false" />
           <Property Name="CropID" Type="Int32" Nullable="false" />
           <Property Name="CropWaterStatusID" Type="Int32" Nullable="false" />
-          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Description" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
-          <Property Name="Size" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="History" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Size" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="History" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="DatePlantec" Type="DateTime" Nullable="false" Precision="3" />
-          <NavigationProperty Name="CROP" Relationship="PKPalsModel.FK_4" FromRole="PLOT" ToRole="CROP" />
-          <NavigationProperty Name="CROP_WATER_STATUS" Relationship="PKPalsModel.FK_9" FromRole="PLOT" ToRole="CROP_WATER_STATUS" />
-          <NavigationProperty Name="FARM" Relationship="PKPalsModel.FK_3" FromRole="PLOT" ToRole="FARM" />
+          <NavigationProperty Name="CROP" Relationship="Self.FK_4" FromRole="PLOT" ToRole="CROP" />
+          <NavigationProperty Name="CROP_WATER_STATUS" Relationship="Self.FK_9" FromRole="PLOT" ToRole="CROP_WATER_STATUS" />
+          <NavigationProperty Name="FARM" Relationship="Self.FK_3" FromRole="PLOT" ToRole="FARM" />
         </EntityType>
         <EntityType Name="SCHEDULE">
           <Key>
@@ -870,18 +777,18 @@
           <Property Name="EmployeeID" Type="Int32" Nullable="false" />
           <Property Name="EquipmentID" Type="Int32" Nullable="false" />
           <Property Name="Time" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="IsApproved" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="EMPLOYEE" Relationship="PKPalsModel.FK_5" FromRole="SCHEDULE" ToRole="EMPLOYEE" />
-          <NavigationProperty Name="EQUIPMENT" Relationship="PKPalsModel.FK_6" FromRole="SCHEDULE" ToRole="EQUIPMENT" />
+          <Property Name="IsApproved" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="EMPLOYEE" Relationship="Self.FK_5" FromRole="SCHEDULE" ToRole="EMPLOYEE" />
+          <NavigationProperty Name="EQUIPMENT" Relationship="Self.FK_6" FromRole="SCHEDULE" ToRole="EQUIPMENT" />
         </EntityType>
         <EntityType Name="STATUS">
           <Key>
             <PropertyRef Name="StatusID" />
           </Key>
           <Property Name="StatusID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Description" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="EQUIPMENTs" Relationship="PKPalsModel.FK_8" FromRole="STATUS" ToRole="EQUIPMENT" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="EQUIPMENTs" Relationship="Self.FK_8" FromRole="STATUS" ToRole="EQUIPMENT" />
         </EntityType>
         <EntityType Name="SUPPLy">
           <Key>
@@ -889,92 +796,92 @@
           </Key>
           <Property Name="SuppliesID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CategoryID" Type="Int32" Nullable="false" />
-          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Type" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Description" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
-          <Property Name="Unit" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="CATEGORY" Relationship="PKPalsModel.FK_14" FromRole="SUPPLy" ToRole="CATEGORY" />
-          <NavigationProperty Name="INVENTORies" Relationship="PKPalsModel.FK_11" FromRole="SUPPLy" ToRole="INVENTORY" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="CATEGORY" Relationship="Self.FK_14" FromRole="SUPPLIES" ToRole="CATEGORY" />
+          <NavigationProperty Name="INVENTORies" Relationship="Self.FK_11" FromRole="SUPPLIES" ToRole="INVENTORY" />
         </EntityType>
         <EntityType Name="USER_POSITION">
           <Key>
             <PropertyRef Name="PositionID" />
           </Key>
           <Property Name="PositionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="EMPLOYEEs" Relationship="PKPalsModel.FK_13" FromRole="USER_POSITION" ToRole="EMPLOYEE" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="EMPLOYEEs" Relationship="Self.FK_13" FromRole="USER_POSITION" ToRole="EMPLOYEE" />
         </EntityType>
         <Association Name="FK_AspNetRoleClaims_AspNetRoles_RoleId">
-          <End Type="PKPalsModel.AspNetRole" Role="AspNetRole" Multiplicity="1">
+          <End Role="AspNetRoles" Type="Self.AspNetRole" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Type="PKPalsModel.AspNetRoleClaim" Role="AspNetRoleClaim" Multiplicity="*" />
+          <End Role="AspNetRoleClaims" Type="Self.AspNetRoleClaim" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="AspNetRole">
+            <Principal Role="AspNetRoles">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="AspNetRoleClaim">
+            <Dependent Role="AspNetRoleClaims">
               <PropertyRef Name="RoleId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_AspNetUserClaims_AspNetUsers_UserId">
-          <End Type="PKPalsModel.AspNetUser" Role="AspNetUser" Multiplicity="1">
+          <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Type="PKPalsModel.AspNetUserClaim" Role="AspNetUserClaim" Multiplicity="*" />
+          <End Role="AspNetUserClaims" Type="Self.AspNetUserClaim" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="AspNetUser">
+            <Principal Role="AspNetUsers">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="AspNetUserClaim">
+            <Dependent Role="AspNetUserClaims">
               <PropertyRef Name="UserId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_AspNetUserLogins_AspNetUsers_UserId">
-          <End Type="PKPalsModel.AspNetUser" Role="AspNetUser" Multiplicity="1">
+          <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Type="PKPalsModel.AspNetUserLogin" Role="AspNetUserLogin" Multiplicity="*" />
+          <End Role="AspNetUserLogins" Type="Self.AspNetUserLogin" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="AspNetUser">
+            <Principal Role="AspNetUsers">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="AspNetUserLogin">
+            <Dependent Role="AspNetUserLogins">
               <PropertyRef Name="UserId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_AspNetUserTokens_AspNetUsers_UserId">
-          <End Type="PKPalsModel.AspNetUser" Role="AspNetUser" Multiplicity="1">
+          <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Type="PKPalsModel.AspNetUserToken" Role="AspNetUserToken" Multiplicity="*" />
+          <End Role="AspNetUserTokens" Type="Self.AspNetUserToken" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="AspNetUser">
+            <Principal Role="AspNetUsers">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="AspNetUserToken">
+            <Dependent Role="AspNetUserTokens">
               <PropertyRef Name="UserId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_14">
-          <End Type="PKPalsModel.CATEGORY" Role="CATEGORY" Multiplicity="1" />
-          <End Type="PKPalsModel.SUPPLy" Role="SUPPLy" Multiplicity="*" />
+          <End Role="CATEGORY" Type="Self.CATEGORY" Multiplicity="1" />
+          <End Role="SUPPLIES" Type="Self.SUPPLy" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CATEGORY">
               <PropertyRef Name="CategoryID" />
             </Principal>
-            <Dependent Role="SUPPLy">
+            <Dependent Role="SUPPLIES">
               <PropertyRef Name="CategoryID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_4">
-          <End Type="PKPalsModel.CROP" Role="CROP" Multiplicity="1" />
-          <End Type="PKPalsModel.PLOT" Role="PLOT" Multiplicity="*" />
+          <End Role="CROP" Type="Self.CROP" Multiplicity="1" />
+          <End Role="PLOT" Type="Self.PLOT" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CROP">
               <PropertyRef Name="CropID" />
@@ -985,8 +892,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_9">
-          <End Type="PKPalsModel.CROP_WATER_STATUS" Role="CROP_WATER_STATUS" Multiplicity="1" />
-          <End Type="PKPalsModel.PLOT" Role="PLOT" Multiplicity="*" />
+          <End Role="CROP_WATER_STATUS" Type="Self.CROP_WATER_STATUS" Multiplicity="1" />
+          <End Role="PLOT" Type="Self.PLOT" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CROP_WATER_STATUS">
               <PropertyRef Name="CropWaterStatusID" />
@@ -997,8 +904,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_15">
-          <End Type="PKPalsModel.CUSTOMER" Role="CUSTOMER" Multiplicity="1" />
-          <End Type="PKPalsModel.CUSTOMERROSTER" Role="CUSTOMERROSTER" Multiplicity="*" />
+          <End Role="CUSTOMER" Type="Self.CUSTOMER" Multiplicity="1" />
+          <End Role="CUSTOMERROSTER" Type="Self.CUSTOMERROSTER" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CUSTOMER">
               <PropertyRef Name="CustomerID" />
@@ -1009,8 +916,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_14_1">
-          <End Type="PKPalsModel.FARM" Role="FARM" Multiplicity="1" />
-          <End Type="PKPalsModel.CUSTOMERROSTER" Role="CUSTOMERROSTER" Multiplicity="*" />
+          <End Role="FARM" Type="Self.FARM" Multiplicity="1" />
+          <End Role="CUSTOMERROSTER" Type="Self.CUSTOMERROSTER" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="FARM">
               <PropertyRef Name="FarmID" />
@@ -1021,8 +928,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_13">
-          <End Type="PKPalsModel.USER_POSITION" Role="USER_POSITION" Multiplicity="1" />
-          <End Type="PKPalsModel.EMPLOYEE" Role="EMPLOYEE" Multiplicity="*" />
+          <End Role="USER_POSITION" Type="Self.USER_POSITION" Multiplicity="1" />
+          <End Role="EMPLOYEE" Type="Self.EMPLOYEE" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="USER_POSITION">
               <PropertyRef Name="PositionID" />
@@ -1033,8 +940,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_5">
-          <End Type="PKPalsModel.EMPLOYEE" Role="EMPLOYEE" Multiplicity="1" />
-          <End Type="PKPalsModel.SCHEDULE" Role="SCHEDULE" Multiplicity="*" />
+          <End Role="EMPLOYEE" Type="Self.EMPLOYEE" Multiplicity="1" />
+          <End Role="SCHEDULE" Type="Self.SCHEDULE" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="EMPLOYEE">
               <PropertyRef Name="EmployeeID" />
@@ -1045,8 +952,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_15_1">
-          <End Type="PKPalsModel.FARM" Role="FARM" Multiplicity="1" />
-          <End Type="PKPalsModel.EQUIPMENT" Role="EQUIPMENT" Multiplicity="*" />
+          <End Role="FARM" Type="Self.FARM" Multiplicity="1" />
+          <End Role="EQUIPMENT" Type="Self.EQUIPMENT" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="FARM">
               <PropertyRef Name="FarmID" />
@@ -1057,8 +964,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_6">
-          <End Type="PKPalsModel.EQUIPMENT" Role="EQUIPMENT" Multiplicity="1" />
-          <End Type="PKPalsModel.SCHEDULE" Role="SCHEDULE" Multiplicity="*" />
+          <End Role="EQUIPMENT" Type="Self.EQUIPMENT" Multiplicity="1" />
+          <End Role="SCHEDULE" Type="Self.SCHEDULE" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="EQUIPMENT">
               <PropertyRef Name="EquipmentID" />
@@ -1069,8 +976,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_8">
-          <End Type="PKPalsModel.STATUS" Role="STATUS" Multiplicity="1" />
-          <End Type="PKPalsModel.EQUIPMENT" Role="EQUIPMENT" Multiplicity="*" />
+          <End Role="STATUS" Type="Self.STATUS" Multiplicity="1" />
+          <End Role="EQUIPMENT" Type="Self.EQUIPMENT" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="STATUS">
               <PropertyRef Name="StatusID" />
@@ -1081,8 +988,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_12">
-          <End Type="PKPalsModel.FARM" Role="FARM" Multiplicity="1" />
-          <End Type="PKPalsModel.INVENTORY" Role="INVENTORY" Multiplicity="*" />
+          <End Role="FARM" Type="Self.FARM" Multiplicity="1" />
+          <End Role="INVENTORY" Type="Self.INVENTORY" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="FARM">
               <PropertyRef Name="FarmID" />
@@ -1093,8 +1000,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_3">
-          <End Type="PKPalsModel.FARM" Role="FARM" Multiplicity="1" />
-          <End Type="PKPalsModel.PLOT" Role="PLOT" Multiplicity="*" />
+          <End Role="FARM" Type="Self.FARM" Multiplicity="1" />
+          <End Role="PLOT" Type="Self.PLOT" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="FARM">
               <PropertyRef Name="FarmID" />
@@ -1105,10 +1012,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_11">
-          <End Type="PKPalsModel.SUPPLy" Role="SUPPLy" Multiplicity="1" />
-          <End Type="PKPalsModel.INVENTORY" Role="INVENTORY" Multiplicity="*" />
+          <End Role="SUPPLIES" Type="Self.SUPPLy" Multiplicity="1" />
+          <End Role="INVENTORY" Type="Self.INVENTORY" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="SUPPLy">
+            <Principal Role="SUPPLIES">
               <PropertyRef Name="SuppliesID" />
             </Principal>
             <Dependent Role="INVENTORY">
@@ -1117,10 +1024,104 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="AspNetUserRoles">
-          <End Type="PKPalsModel.AspNetRole" Role="AspNetRole" Multiplicity="*" />
-          <End Type="PKPalsModel.AspNetUser" Role="AspNetUser" Multiplicity="*" />
+          <End Role="AspNetRoles" Type="Self.AspNetRole" Multiplicity="*" />
+          <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="*" />
         </Association>
-        </Schema>
+        <EntityContainer Name="PKPalsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AspNetRoleClaims" EntityType="Self.AspNetRoleClaim" />
+          <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRole" />
+          <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaim" />
+          <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogin" />
+          <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUser" />
+          <EntitySet Name="AspNetUserTokens" EntityType="Self.AspNetUserToken" />
+          <EntitySet Name="CATEGORies" EntityType="Self.CATEGORY" />
+          <EntitySet Name="CROPs" EntityType="Self.CROP" />
+          <EntitySet Name="CROP_WATER_STATUS" EntityType="Self.CROP_WATER_STATUS" />
+          <EntitySet Name="CUSTOMERs" EntityType="Self.CUSTOMER" />
+          <EntitySet Name="CUSTOMERROSTERs" EntityType="Self.CUSTOMERROSTER" />
+          <EntitySet Name="EMPLOYEEs" EntityType="Self.EMPLOYEE" />
+          <EntitySet Name="EQUIPMENTs" EntityType="Self.EQUIPMENT" />
+          <EntitySet Name="FARMs" EntityType="Self.FARM" />
+          <EntitySet Name="INVENTORies" EntityType="Self.INVENTORY" />
+          <EntitySet Name="PLOTs" EntityType="Self.PLOT" />
+          <EntitySet Name="SCHEDULEs" EntityType="Self.SCHEDULE" />
+          <EntitySet Name="STATUS" EntityType="Self.STATUS" />
+          <EntitySet Name="SUPPLIES" EntityType="Self.SUPPLy" />
+          <EntitySet Name="USER_POSITION" EntityType="Self.USER_POSITION" />
+          <AssociationSet Name="FK_AspNetRoleClaims_AspNetRoles_RoleId" Association="Self.FK_AspNetRoleClaims_AspNetRoles_RoleId">
+            <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+            <End Role="AspNetRoleClaims" EntitySet="AspNetRoleClaims" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetUserClaims_AspNetUsers_UserId" Association="Self.FK_AspNetUserClaims_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetUserLogins_AspNetUsers_UserId" Association="Self.FK_AspNetUserLogins_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetUserTokens_AspNetUsers_UserId" Association="Self.FK_AspNetUserTokens_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserTokens" EntitySet="AspNetUserTokens" />
+          </AssociationSet>
+          <AssociationSet Name="FK_14" Association="Self.FK_14">
+            <End Role="CATEGORY" EntitySet="CATEGORies" />
+            <End Role="SUPPLIES" EntitySet="SUPPLIES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_4" Association="Self.FK_4">
+            <End Role="CROP" EntitySet="CROPs" />
+            <End Role="PLOT" EntitySet="PLOTs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_9" Association="Self.FK_9">
+            <End Role="CROP_WATER_STATUS" EntitySet="CROP_WATER_STATUS" />
+            <End Role="PLOT" EntitySet="PLOTs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_15" Association="Self.FK_15">
+            <End Role="CUSTOMER" EntitySet="CUSTOMERs" />
+            <End Role="CUSTOMERROSTER" EntitySet="CUSTOMERROSTERs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_14_1" Association="Self.FK_14_1">
+            <End Role="FARM" EntitySet="FARMs" />
+            <End Role="CUSTOMERROSTER" EntitySet="CUSTOMERROSTERs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_13" Association="Self.FK_13">
+            <End Role="USER_POSITION" EntitySet="USER_POSITION" />
+            <End Role="EMPLOYEE" EntitySet="EMPLOYEEs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_5" Association="Self.FK_5">
+            <End Role="EMPLOYEE" EntitySet="EMPLOYEEs" />
+            <End Role="SCHEDULE" EntitySet="SCHEDULEs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_15_1" Association="Self.FK_15_1">
+            <End Role="FARM" EntitySet="FARMs" />
+            <End Role="EQUIPMENT" EntitySet="EQUIPMENTs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_6" Association="Self.FK_6">
+            <End Role="EQUIPMENT" EntitySet="EQUIPMENTs" />
+            <End Role="SCHEDULE" EntitySet="SCHEDULEs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_8" Association="Self.FK_8">
+            <End Role="STATUS" EntitySet="STATUS" />
+            <End Role="EQUIPMENT" EntitySet="EQUIPMENTs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_12" Association="Self.FK_12">
+            <End Role="FARM" EntitySet="FARMs" />
+            <End Role="INVENTORY" EntitySet="INVENTORies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_3" Association="Self.FK_3">
+            <End Role="FARM" EntitySet="FARMs" />
+            <End Role="PLOT" EntitySet="PLOTs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_11" Association="Self.FK_11">
+            <End Role="SUPPLIES" EntitySet="SUPPLIES" />
+            <End Role="INVENTORY" EntitySet="INVENTORies" />
+          </AssociationSet>
+          <AssociationSet Name="AspNetUserRoles" Association="Self.AspNetUserRoles">
+            <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -1129,237 +1130,237 @@
           <EntitySetMapping Name="AspNetRoleClaims">
             <EntityTypeMapping TypeName="PKPalsModel.AspNetRoleClaim">
               <MappingFragment StoreEntitySet="AspNetRoleClaims">
-                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
-                <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
-                <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+                <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="AspNetRoles">
             <EntityTypeMapping TypeName="PKPalsModel.AspNetRole">
               <MappingFragment StoreEntitySet="AspNetRoles">
-                <ScalarProperty Name="NormalizedName" ColumnName="NormalizedName" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="NormalizedName" ColumnName="NormalizedName" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="AspNetUserClaims">
             <EntityTypeMapping TypeName="PKPalsModel.AspNetUserClaim">
               <MappingFragment StoreEntitySet="AspNetUserClaims">
-                <ScalarProperty Name="UserId" ColumnName="UserId" />
-                <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
-                <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+                <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="AspNetUserLogins">
             <EntityTypeMapping TypeName="PKPalsModel.AspNetUserLogin">
               <MappingFragment StoreEntitySet="AspNetUserLogins">
-                <ScalarProperty Name="UserId" ColumnName="UserId" />
-                <ScalarProperty Name="ProviderDisplayName" ColumnName="ProviderDisplayName" />
-                <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
                 <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+                <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+                <ScalarProperty Name="ProviderDisplayName" ColumnName="ProviderDisplayName" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="AspNetUsers">
             <EntityTypeMapping TypeName="PKPalsModel.AspNetUser">
               <MappingFragment StoreEntitySet="AspNetUsers">
-                <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
-                <ScalarProperty Name="UserName" ColumnName="UserName" />
-                <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
-                <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
-                <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
-                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
-                <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
-                <ScalarProperty Name="NormalizedUserName" ColumnName="NormalizedUserName" />
-                <ScalarProperty Name="NormalizedEmail" ColumnName="NormalizedEmail" />
-                <ScalarProperty Name="LockoutEnd" ColumnName="LockoutEnd" />
-                <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
-                <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
-                <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+                <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+                <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+                <ScalarProperty Name="LockoutEnd" ColumnName="LockoutEnd" />
+                <ScalarProperty Name="NormalizedEmail" ColumnName="NormalizedEmail" />
+                <ScalarProperty Name="NormalizedUserName" ColumnName="NormalizedUserName" />
+                <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+                <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+                <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="AspNetUserTokens">
             <EntityTypeMapping TypeName="PKPalsModel.AspNetUserToken">
               <MappingFragment StoreEntitySet="AspNetUserTokens">
-                <ScalarProperty Name="Value" ColumnName="Value" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="CATEGORies">
             <EntityTypeMapping TypeName="PKPalsModel.CATEGORY">
               <MappingFragment StoreEntitySet="CATEGORY">
-                <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="CROPs">
             <EntityTypeMapping TypeName="PKPalsModel.CROP">
               <MappingFragment StoreEntitySet="CROP">
-                <ScalarProperty Name="HarvestTechniques" ColumnName="HarvestTechniques" />
-                <ScalarProperty Name="CropRotationRecom" ColumnName="CropRotationRecom" />
-                <ScalarProperty Name="WaterAmount" ColumnName="WaterAmount" />
-                <ScalarProperty Name="MarketValue" ColumnName="MarketValue" />
-                <ScalarProperty Name="ShelfLife" ColumnName="ShelfLife" />
-                <ScalarProperty Name="Season" ColumnName="Season" />
-                <ScalarProperty Name="DaysTillHarvest" ColumnName="DaysTillHarvest" />
-                <ScalarProperty Name="Type" ColumnName="Type" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="CropID" ColumnName="CropID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="DaysTillHarvest" ColumnName="DaysTillHarvest" />
+                <ScalarProperty Name="Season" ColumnName="Season" />
+                <ScalarProperty Name="ShelfLife" ColumnName="ShelfLife" />
+                <ScalarProperty Name="MarketValue" ColumnName="MarketValue" />
+                <ScalarProperty Name="WaterAmount" ColumnName="WaterAmount" />
+                <ScalarProperty Name="CropRotationRecom" ColumnName="CropRotationRecom" />
+                <ScalarProperty Name="HarvestTechniques" ColumnName="HarvestTechniques" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="CROP_WATER_STATUS">
             <EntityTypeMapping TypeName="PKPalsModel.CROP_WATER_STATUS">
               <MappingFragment StoreEntitySet="CROP_WATER_STATUS">
-                <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="CropWaterStatusID" ColumnName="CropWaterStatusID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="CUSTOMERs">
             <EntityTypeMapping TypeName="PKPalsModel.CUSTOMER">
               <MappingFragment StoreEntitySet="CUSTOMER">
-                <ScalarProperty Name="Phone" ColumnName="Phone" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="LastName" ColumnName="LastName" />
-                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="CUSTOMERROSTERs">
             <EntityTypeMapping TypeName="PKPalsModel.CUSTOMERROSTER">
               <MappingFragment StoreEntitySet="CUSTOMERROSTER">
-                <ScalarProperty Name="FarmID" ColumnName="FarmID" />
-                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
                 <ScalarProperty Name="CustomerRosterID" ColumnName="CustomerRosterID" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="FarmID" ColumnName="FarmID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="EMPLOYEEs">
             <EntityTypeMapping TypeName="PKPalsModel.EMPLOYEE">
               <MappingFragment StoreEntitySet="EMPLOYEE">
-                <ScalarProperty Name="Allergies" ColumnName="Allergies" />
-                <ScalarProperty Name="Certifications" ColumnName="Certifications" />
-                <ScalarProperty Name="DateofBirth" ColumnName="DateofBirth" />
-                <ScalarProperty Name="LastName" ColumnName="LastName" />
-                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-                <ScalarProperty Name="PositionID" ColumnName="PositionID" />
                 <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="PositionID" ColumnName="PositionID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="DateofBirth" ColumnName="DateofBirth" />
+                <ScalarProperty Name="Certifications" ColumnName="Certifications" />
+                <ScalarProperty Name="Allergies" ColumnName="Allergies" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="EQUIPMENTs">
             <EntityTypeMapping TypeName="PKPalsModel.EQUIPMENT">
               <MappingFragment StoreEntitySet="EQUIPMENT">
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="Type" ColumnName="Type" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="StatusID" ColumnName="StatusID" />
-                <ScalarProperty Name="FarmID" ColumnName="FarmID" />
                 <ScalarProperty Name="EquipmentID" ColumnName="EquipmentID" />
+                <ScalarProperty Name="FarmID" ColumnName="FarmID" />
+                <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="FARMs">
             <EntityTypeMapping TypeName="PKPalsModel.FARM">
               <MappingFragment StoreEntitySet="FARM">
-                <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
-                <ScalarProperty Name="City" ColumnName="City" />
-                <ScalarProperty Name="State" ColumnName="State" />
-                <ScalarProperty Name="Address" ColumnName="Address" />
-                <ScalarProperty Name="Size" ColumnName="Size" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="FarmID" ColumnName="FarmID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Size" ColumnName="Size" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="INVENTORies">
             <EntityTypeMapping TypeName="PKPalsModel.INVENTORY">
               <MappingFragment StoreEntitySet="INVENTORY">
-                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
-                <ScalarProperty Name="SuppliesID" ColumnName="SuppliesID" />
-                <ScalarProperty Name="FarmID" ColumnName="FarmID" />
                 <ScalarProperty Name="InventoryID" ColumnName="InventoryID" />
+                <ScalarProperty Name="FarmID" ColumnName="FarmID" />
+                <ScalarProperty Name="SuppliesID" ColumnName="SuppliesID" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="PLOTs">
             <EntityTypeMapping TypeName="PKPalsModel.PLOT">
               <MappingFragment StoreEntitySet="PLOT">
-                <ScalarProperty Name="DatePlantec" ColumnName="DatePlantec" />
-                <ScalarProperty Name="History" ColumnName="History" />
-                <ScalarProperty Name="Size" ColumnName="Size" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="CropWaterStatusID" ColumnName="CropWaterStatusID" />
-                <ScalarProperty Name="CropID" ColumnName="CropID" />
-                <ScalarProperty Name="FarmID" ColumnName="FarmID" />
                 <ScalarProperty Name="PlotID" ColumnName="PlotID" />
+                <ScalarProperty Name="FarmID" ColumnName="FarmID" />
+                <ScalarProperty Name="CropID" ColumnName="CropID" />
+                <ScalarProperty Name="CropWaterStatusID" ColumnName="CropWaterStatusID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Size" ColumnName="Size" />
+                <ScalarProperty Name="History" ColumnName="History" />
+                <ScalarProperty Name="DatePlantec" ColumnName="DatePlantec" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="SCHEDULEs">
             <EntityTypeMapping TypeName="PKPalsModel.SCHEDULE">
               <MappingFragment StoreEntitySet="SCHEDULE">
-                <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
-                <ScalarProperty Name="Time" ColumnName="Time" />
-                <ScalarProperty Name="EquipmentID" ColumnName="EquipmentID" />
-                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
                 <ScalarProperty Name="ScheduleID" ColumnName="ScheduleID" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="EquipmentID" ColumnName="EquipmentID" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="STATUS">
             <EntityTypeMapping TypeName="PKPalsModel.STATUS">
               <MappingFragment StoreEntitySet="STATUS">
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="SUPPLIES">
             <EntityTypeMapping TypeName="PKPalsModel.SUPPLy">
               <MappingFragment StoreEntitySet="SUPPLIES">
-                <ScalarProperty Name="Unit" ColumnName="Unit" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="Type" ColumnName="Type" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
                 <ScalarProperty Name="SuppliesID" ColumnName="SuppliesID" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="USER_POSITION">
             <EntityTypeMapping TypeName="PKPalsModel.USER_POSITION">
               <MappingFragment StoreEntitySet="USER_POSITION">
-                <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="PositionID" ColumnName="PositionID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <AssociationSetMapping Name="AspNetUserRoles" TypeName="PKPalsModel.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
-            <EndProperty Name="AspNetUser">
-              <ScalarProperty Name="Id" ColumnName="UserId" />
-            </EndProperty>
-            <EndProperty Name="AspNetRole">
+            <EndProperty Name="AspNetRoles">
               <ScalarProperty Name="Id" ColumnName="RoleId" />
+            </EndProperty>
+            <EndProperty Name="AspNetUsers">
+              <ScalarProperty Name="Id" ColumnName="UserId" />
             </EndProperty>
           </AssociationSetMapping>
         </EntityContainerMapping>

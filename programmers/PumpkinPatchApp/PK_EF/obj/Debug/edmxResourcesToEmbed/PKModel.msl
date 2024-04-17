@@ -4,237 +4,237 @@
     <EntitySetMapping Name="AspNetRoleClaims">
       <EntityTypeMapping TypeName="PKPalsModel.AspNetRoleClaim">
         <MappingFragment StoreEntitySet="AspNetRoleClaims">
-          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
-          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
-          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
           <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="AspNetRoles">
       <EntityTypeMapping TypeName="PKPalsModel.AspNetRole">
         <MappingFragment StoreEntitySet="AspNetRoles">
-          <ScalarProperty Name="NormalizedName" ColumnName="NormalizedName" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
           <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NormalizedName" ColumnName="NormalizedName" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="AspNetUserClaims">
       <EntityTypeMapping TypeName="PKPalsModel.AspNetUserClaim">
         <MappingFragment StoreEntitySet="AspNetUserClaims">
-          <ScalarProperty Name="UserId" ColumnName="UserId" />
-          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
-          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
           <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="AspNetUserLogins">
       <EntityTypeMapping TypeName="PKPalsModel.AspNetUserLogin">
         <MappingFragment StoreEntitySet="AspNetUserLogins">
-          <ScalarProperty Name="UserId" ColumnName="UserId" />
-          <ScalarProperty Name="ProviderDisplayName" ColumnName="ProviderDisplayName" />
-          <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
           <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+          <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+          <ScalarProperty Name="ProviderDisplayName" ColumnName="ProviderDisplayName" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="AspNetUsers">
       <EntityTypeMapping TypeName="PKPalsModel.AspNetUser">
         <MappingFragment StoreEntitySet="AspNetUsers">
-          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
-          <ScalarProperty Name="UserName" ColumnName="UserName" />
-          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
-          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
-          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
-          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
-          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
-          <ScalarProperty Name="NormalizedUserName" ColumnName="NormalizedUserName" />
-          <ScalarProperty Name="NormalizedEmail" ColumnName="NormalizedEmail" />
-          <ScalarProperty Name="LockoutEnd" ColumnName="LockoutEnd" />
-          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
-          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
-          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
           <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="LockoutEnd" ColumnName="LockoutEnd" />
+          <ScalarProperty Name="NormalizedEmail" ColumnName="NormalizedEmail" />
+          <ScalarProperty Name="NormalizedUserName" ColumnName="NormalizedUserName" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="AspNetUserTokens">
       <EntityTypeMapping TypeName="PKPalsModel.AspNetUserToken">
         <MappingFragment StoreEntitySet="AspNetUserTokens">
-          <ScalarProperty Name="Value" ColumnName="Value" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
           <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="CATEGORies">
       <EntityTypeMapping TypeName="PKPalsModel.CATEGORY">
         <MappingFragment StoreEntitySet="CATEGORY">
-          <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="CROPs">
       <EntityTypeMapping TypeName="PKPalsModel.CROP">
         <MappingFragment StoreEntitySet="CROP">
-          <ScalarProperty Name="HarvestTechniques" ColumnName="HarvestTechniques" />
-          <ScalarProperty Name="CropRotationRecom" ColumnName="CropRotationRecom" />
-          <ScalarProperty Name="WaterAmount" ColumnName="WaterAmount" />
-          <ScalarProperty Name="MarketValue" ColumnName="MarketValue" />
-          <ScalarProperty Name="ShelfLife" ColumnName="ShelfLife" />
-          <ScalarProperty Name="Season" ColumnName="Season" />
-          <ScalarProperty Name="DaysTillHarvest" ColumnName="DaysTillHarvest" />
-          <ScalarProperty Name="Type" ColumnName="Type" />
-          <ScalarProperty Name="Description" ColumnName="Description" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="CropID" ColumnName="CropID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="DaysTillHarvest" ColumnName="DaysTillHarvest" />
+          <ScalarProperty Name="Season" ColumnName="Season" />
+          <ScalarProperty Name="ShelfLife" ColumnName="ShelfLife" />
+          <ScalarProperty Name="MarketValue" ColumnName="MarketValue" />
+          <ScalarProperty Name="WaterAmount" ColumnName="WaterAmount" />
+          <ScalarProperty Name="CropRotationRecom" ColumnName="CropRotationRecom" />
+          <ScalarProperty Name="HarvestTechniques" ColumnName="HarvestTechniques" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="CROP_WATER_STATUS">
       <EntityTypeMapping TypeName="PKPalsModel.CROP_WATER_STATUS">
         <MappingFragment StoreEntitySet="CROP_WATER_STATUS">
-          <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="CropWaterStatusID" ColumnName="CropWaterStatusID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="CUSTOMERs">
       <EntityTypeMapping TypeName="PKPalsModel.CUSTOMER">
         <MappingFragment StoreEntitySet="CUSTOMER">
-          <ScalarProperty Name="Phone" ColumnName="Phone" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="LastName" ColumnName="LastName" />
-          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
           <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="CUSTOMERROSTERs">
       <EntityTypeMapping TypeName="PKPalsModel.CUSTOMERROSTER">
         <MappingFragment StoreEntitySet="CUSTOMERROSTER">
-          <ScalarProperty Name="FarmID" ColumnName="FarmID" />
-          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
           <ScalarProperty Name="CustomerRosterID" ColumnName="CustomerRosterID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="FarmID" ColumnName="FarmID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="EMPLOYEEs">
       <EntityTypeMapping TypeName="PKPalsModel.EMPLOYEE">
         <MappingFragment StoreEntitySet="EMPLOYEE">
-          <ScalarProperty Name="Allergies" ColumnName="Allergies" />
-          <ScalarProperty Name="Certifications" ColumnName="Certifications" />
-          <ScalarProperty Name="DateofBirth" ColumnName="DateofBirth" />
-          <ScalarProperty Name="LastName" ColumnName="LastName" />
-          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-          <ScalarProperty Name="PositionID" ColumnName="PositionID" />
           <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="PositionID" ColumnName="PositionID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="DateofBirth" ColumnName="DateofBirth" />
+          <ScalarProperty Name="Certifications" ColumnName="Certifications" />
+          <ScalarProperty Name="Allergies" ColumnName="Allergies" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="EQUIPMENTs">
       <EntityTypeMapping TypeName="PKPalsModel.EQUIPMENT">
         <MappingFragment StoreEntitySet="EQUIPMENT">
-          <ScalarProperty Name="Description" ColumnName="Description" />
-          <ScalarProperty Name="Type" ColumnName="Type" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
-          <ScalarProperty Name="FarmID" ColumnName="FarmID" />
           <ScalarProperty Name="EquipmentID" ColumnName="EquipmentID" />
+          <ScalarProperty Name="FarmID" ColumnName="FarmID" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="FARMs">
       <EntityTypeMapping TypeName="PKPalsModel.FARM">
         <MappingFragment StoreEntitySet="FARM">
-          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
-          <ScalarProperty Name="City" ColumnName="City" />
-          <ScalarProperty Name="State" ColumnName="State" />
-          <ScalarProperty Name="Address" ColumnName="Address" />
-          <ScalarProperty Name="Size" ColumnName="Size" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="FarmID" ColumnName="FarmID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="INVENTORies">
       <EntityTypeMapping TypeName="PKPalsModel.INVENTORY">
         <MappingFragment StoreEntitySet="INVENTORY">
-          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
-          <ScalarProperty Name="SuppliesID" ColumnName="SuppliesID" />
-          <ScalarProperty Name="FarmID" ColumnName="FarmID" />
           <ScalarProperty Name="InventoryID" ColumnName="InventoryID" />
+          <ScalarProperty Name="FarmID" ColumnName="FarmID" />
+          <ScalarProperty Name="SuppliesID" ColumnName="SuppliesID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="PLOTs">
       <EntityTypeMapping TypeName="PKPalsModel.PLOT">
         <MappingFragment StoreEntitySet="PLOT">
-          <ScalarProperty Name="DatePlantec" ColumnName="DatePlantec" />
-          <ScalarProperty Name="History" ColumnName="History" />
-          <ScalarProperty Name="Size" ColumnName="Size" />
-          <ScalarProperty Name="Description" ColumnName="Description" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="CropWaterStatusID" ColumnName="CropWaterStatusID" />
-          <ScalarProperty Name="CropID" ColumnName="CropID" />
-          <ScalarProperty Name="FarmID" ColumnName="FarmID" />
           <ScalarProperty Name="PlotID" ColumnName="PlotID" />
+          <ScalarProperty Name="FarmID" ColumnName="FarmID" />
+          <ScalarProperty Name="CropID" ColumnName="CropID" />
+          <ScalarProperty Name="CropWaterStatusID" ColumnName="CropWaterStatusID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="History" ColumnName="History" />
+          <ScalarProperty Name="DatePlantec" ColumnName="DatePlantec" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="SCHEDULEs">
       <EntityTypeMapping TypeName="PKPalsModel.SCHEDULE">
         <MappingFragment StoreEntitySet="SCHEDULE">
-          <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
-          <ScalarProperty Name="Time" ColumnName="Time" />
-          <ScalarProperty Name="EquipmentID" ColumnName="EquipmentID" />
-          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
           <ScalarProperty Name="ScheduleID" ColumnName="ScheduleID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="EquipmentID" ColumnName="EquipmentID" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="STATUS">
       <EntityTypeMapping TypeName="PKPalsModel.STATUS">
         <MappingFragment StoreEntitySet="STATUS">
-          <ScalarProperty Name="Description" ColumnName="Description" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="SUPPLIES">
       <EntityTypeMapping TypeName="PKPalsModel.SUPPLy">
         <MappingFragment StoreEntitySet="SUPPLIES">
-          <ScalarProperty Name="Unit" ColumnName="Unit" />
-          <ScalarProperty Name="Description" ColumnName="Description" />
-          <ScalarProperty Name="Type" ColumnName="Type" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
           <ScalarProperty Name="SuppliesID" ColumnName="SuppliesID" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="USER_POSITION">
       <EntityTypeMapping TypeName="PKPalsModel.USER_POSITION">
         <MappingFragment StoreEntitySet="USER_POSITION">
-          <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="PositionID" ColumnName="PositionID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <AssociationSetMapping Name="AspNetUserRoles" TypeName="PKPalsModel.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
-      <EndProperty Name="AspNetUser">
-        <ScalarProperty Name="Id" ColumnName="UserId" />
-      </EndProperty>
-      <EndProperty Name="AspNetRole">
+      <EndProperty Name="AspNetRoles">
         <ScalarProperty Name="Id" ColumnName="RoleId" />
+      </EndProperty>
+      <EndProperty Name="AspNetUsers">
+        <ScalarProperty Name="Id" ColumnName="UserId" />
       </EndProperty>
     </AssociationSetMapping>
   </EntityContainerMapping>
