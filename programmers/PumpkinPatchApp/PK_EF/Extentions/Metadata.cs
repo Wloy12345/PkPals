@@ -190,7 +190,7 @@ namespace PK_EF
 
         }
     }
-    /*[MetadataType(typeof(INVENTORY.InventMetadata))]
+    [MetadataType(typeof(INVENTORY.InventMetadata))]
 
     public partial class INVENTORY
 
@@ -202,7 +202,14 @@ namespace PK_EF
 
             [Display(Name = "Quantity")]
             public string Quantity { get; set; }
-        }*/
+
+            [Display(Name = "Farm Name")]
+            public string FARM { get; set; }
+
+            [Display(Name = "Supply Name")]
+            public string SUPPLy { get; set; }
+        }
+    }
 
     [MetadataType (typeof(PLOT.PlotMetadata))]
 
