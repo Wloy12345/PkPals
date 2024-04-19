@@ -203,11 +203,22 @@ namespace PK_EF
             [Display(Name = "Quantity")]
             public string Quantity { get; set; }
 
-            [Display(Name = "Farm Name")]
-            public string FARM { get; set; }
+        }
+    }
+
+    [MetadataType(typeof(SUPPLy.SupplyMetadata))]
+
+    public partial class SUPPLy
+
+    {
+
+        private sealed class SupplyMetadata
+
+        {
 
             [Display(Name = "Supply Name")]
-            public string SUPPLy { get; set; }
+            public string Name { get; set; }
+
         }
     }
 
