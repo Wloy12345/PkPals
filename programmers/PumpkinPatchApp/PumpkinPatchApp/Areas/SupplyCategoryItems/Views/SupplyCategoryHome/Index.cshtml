@@ -15,18 +15,14 @@
 
     <h2>Supply Categories</h2>
     <p>
-        @Html.ActionLink("Create New", "Create")
+        @Html.ActionLink("Add New Category »", "Create", null, new { @class = "btn btn-success" })
     </p>
     <table class="table table-striped table-info table-hover" id="supCatTable">
         <thead>
             <tr>
                 <th>
-                    ID
-                </th>
-                <th>
                     @Html.DisplayNameFor(model => model.Name)
                 </th>
-                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -34,15 +30,7 @@
             {
                 <tr>
                     <td>
-                        @Html.DisplayFor(modelItem => item.CategoryID)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Name)
-                    </td>
-                    <td>
-                        @Html.ActionLink("Edit", "Edit", new { id = item.CategoryID }) |
-                        @Html.ActionLink("Details", "Details", new { id = item.CategoryID }) |
-                        @Html.ActionLink("Delete", "Delete", new { id = item.CategoryID })
+                        @Html.ActionLink(item.Name, "Details", "SupplyCategoryHome", new { area = "SupplyCategoryItems", id = item.CategoryID }, null)
                     </td>
                 </tr>
             }
