@@ -18,6 +18,17 @@
         <dd>
             @Html.DisplayFor(model => model.Name)
         </dd>
+
+        <dt>
+            Supplies in Categories
+        </dt>
+
+        @foreach (var m in Model.SUPPLIES)
+        {
+            <dd>
+                @Html.ActionLink(m.Name, "Details", "SupplyHome", new { area = "Supplies", id = m.SuppliesID }, null)
+            </dd>
+        }
     </dl>
 </div>
 <p>
