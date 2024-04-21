@@ -52,6 +52,16 @@
             @Html.DisplayFor(model => model.CATEGORY.Name)
         </dd>
 
+        <dt>
+            Farms with This Supply In Stock
+        </dt>
+
+        @foreach (var m in Model.INVENTORies)
+            {
+                <dd>
+                    @m.FARM.Name (@m.Quantity @m.SUPPLy.Unit)
+                </dd>
+            }
     </dl>
 </div>
 <p>
