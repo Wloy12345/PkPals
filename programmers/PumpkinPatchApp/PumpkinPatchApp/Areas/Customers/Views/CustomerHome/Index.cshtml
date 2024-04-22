@@ -14,7 +14,7 @@
     <h2>Customer List</h2>
 
     <p>
-        @Html.ActionLink("Create New", "Create")
+        @Html.ActionLink("Add New Customer »", "Create", null, new { @class = "btn btn-success" })
     </p>
 
     <table class="table table-striped table-info table-hover" id="custTable">
@@ -22,10 +22,7 @@
             @*This Table has metadata in the EF*@
             <tr>
                 <th>
-                    @Html.DisplayNameFor(model => model.FirstName)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.LastName)
+                    Full Name
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Email)
@@ -33,7 +30,6 @@
                 <th>
                     @Html.DisplayNameFor(model => model.Phone)
                 </th>
-                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -42,21 +38,13 @@
             {
                 <tr>
                     <td>
-                        @Html.DisplayFor(modelItem => item.FirstName)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.LastName)
+                        @Html.ActionLink(item.FirstName + " " + item.LastName, "Details", "CustomerHome", new { area = "Customers", id = item.CustomerID }, null)
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Email)
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Phone)
-                    </td>
-                    <td>
-                        @Html.ActionLink("Edit", "Edit", new { id = item.CustomerID }) |
-                        @Html.ActionLink("Details", "Details", new { id = item.CustomerID }) |
-                        @Html.ActionLink("Delete", "Delete", new { id = item.CustomerID })
                     </td>
                 </tr>
             }

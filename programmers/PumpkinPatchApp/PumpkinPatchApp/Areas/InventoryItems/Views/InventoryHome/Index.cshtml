@@ -27,9 +27,6 @@
                     @Html.DisplayNameFor(model => model.Quantity) (@Html.DisplayNameFor(model => model.SUPPLy.Unit))
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.SUPPLy.Type)
-                </th>
-                <th>
                     @Html.DisplayNameFor(model => model.FARM.Name)
                 </th>
             </tr>
@@ -45,9 +42,6 @@
                         @Html.DisplayFor(modelItem => item.Quantity) @Html.DisplayFor(modelItem => item.SUPPLy.Unit)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.SUPPLy.Type)
-                    </td>
-                    <td>
                         @Html.DisplayFor(modelItem => item.FARM.Name)
                     </td>
                 </tr>
@@ -59,7 +53,9 @@
         $('#inventTable').DataTable({
             search: {
                 search: 'Long'
-            }
+            },
+            order: [[3, 'desc']]
+
         }
         ); // Initialize DataTables for your table (replace 'empTable' with your table ID)
     });
