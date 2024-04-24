@@ -8,8 +8,9 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-info" id="navbarColor01">
     <ul class="nav navbar-nav navbar-link navbar-static-top">
-        <li>@Html.ActionLink("Customer List", "Index", "CustomerHome", new { area = "Customers" }, null)</li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <li>@Html.ActionLink("Farm Rosters", "Index", "CustomerRosterHome", new { area = "CustomerRosterItems" }, null)</li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;
+        <li>@Html.ActionLink("Customer List", "Index", "CustomerHome", new { area = "Customers" }, new { @class = "btn btn-primary" })</li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <li>@Html.ActionLink("Farm Rosters", "Index", "CustomerRosterHome", new { area = "CustomerRosterItems" }, new { @class = "btn btn-primary" })</li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </ul>
 </nav>
 

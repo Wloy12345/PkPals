@@ -20,6 +20,18 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.CUSTOMER.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CUSTOMER.LastName)
+        </dd>
+
+        <dd>
+            @Html.ActionLink("Customer Details", "Details", "CustomerHome", new { area = "Customers", id = Model.CustomerID }, null)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.FARM.Name)
         </dt>
 
@@ -31,5 +43,6 @@
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.CustomerRosterID }) |
+    @Html.ActionLink("Delete", "Delete", new { id = Model.CustomerRosterID }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
