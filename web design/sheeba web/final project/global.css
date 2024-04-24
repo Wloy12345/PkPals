@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-inter: Inter;
+  --font-arial: Arial;
+  --font-inknut-antiqua: "Inknut Antiqua";
+
+  /* font sizes */
+  --font-size-13xl: 32px;
+  --font-size-xl: 20px;
+  --font-size-3xl-8: 22.8px;
+  --font-size-5xl: 24px;
+  --font-size-8xl-3: 27.3px;
+  --font-size-7xl: 26px;
+  --font-size-29xl: 48px;
+  --font-size-45xl: 64px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-black: #000;
+  --color-gray-100: #8b8b8b;
+  --color-gray-200: #181515;
+  --color-dimgray-100: rgba(102, 93, 93, 0.7);
+  --color-darkolivegreen-100: #384511;
+  --color-darkolivegreen-200: #084b1b;
+  --color-gainsboro-100: #d9d9d9;
+  --color-whitesmoke: rgba(238, 238, 238, 0.93);
+}
