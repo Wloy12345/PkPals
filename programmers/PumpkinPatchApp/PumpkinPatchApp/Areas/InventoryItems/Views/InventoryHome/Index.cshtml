@@ -36,7 +36,9 @@
             {
                 <tr>
                     <td>
-                        @Html.ActionLink(item.SUPPLy.Name, "Details", "InventoryHome", new { area = "InventoryItems", id = item.InventoryID }, null)
+                        <a>
+                            @Html.ActionLink(item.SUPPLy.Name, "Details", "InventoryHome", new { area = "InventoryItems", id = item.InventoryID }, null)
+                        </a>
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Quantity) @Html.DisplayFor(modelItem => item.SUPPLy.Unit)
@@ -48,17 +50,23 @@
             }
         </tbody>
     </table>
-    <script>
-    $(document).ready(function () {
-        $('#inventTable').DataTable({
-            search: {
-                search: 'Long'
-            },
-            order: [[3, 'desc']]
-
+    <style>
+        a {
+            color: #165E45;
+            text-decoration: underline;
         }
-        ); // Initialize DataTables for your table (replace 'empTable' with your table ID)
-    });
+    </style>
+    <script>
+        $(document).ready(function () {
+            $('#inventTable').DataTable({
+                search: {
+                    search: 'Long'
+                },
+                order: [[3, 'desc']]
+
+            }
+            ); // Initialize DataTables for your table (replace 'empTable' with your table ID)
+        });
     </script>
 </body>
 </html>

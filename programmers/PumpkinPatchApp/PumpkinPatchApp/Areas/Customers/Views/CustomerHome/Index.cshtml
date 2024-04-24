@@ -38,7 +38,9 @@
             {
                 <tr>
                     <td>
-                        @Html.ActionLink(item.FirstName + " " + item.LastName, "Details", "CustomerHome", new { area = "Customers", id = item.CustomerID }, null)
+                        <a>
+                            @Html.ActionLink(item.FirstName + " " + item.LastName, "Details", "CustomerHome", new { area = "Customers", id = item.CustomerID }, null)
+                        </a>
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Email)
@@ -50,11 +52,16 @@
             }
         </tbody>
     </table>
-
+    <style>
+        a {
+            color: #165E45;
+            text-decoration: underline;
+        }
+    </style>
     <script>
-                $(document).ready(function () {
-                    $('#custTable').DataTable(); // Initialize DataTables for your table (replace 'empTable' with your table ID)
-                });
+        $(document).ready(function () {
+            $('#custTable').DataTable(); // Initialize DataTables for your table (replace 'empTable' with your table ID)
+        });
     </script>
 </body>
 </html>

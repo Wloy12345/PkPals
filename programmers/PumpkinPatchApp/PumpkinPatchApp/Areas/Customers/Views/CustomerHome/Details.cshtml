@@ -44,6 +44,16 @@
             @Html.DisplayFor(model => model.Phone)
         </dd>
 
+        <dt>
+            Farm
+        </dt>
+
+        @foreach (var m in Model.CUSTOMERROSTERs)
+        {
+            <dd>
+                @Html.DisplayFor(model => m.FARM.Name)
+            </dd>
+        }
     </dl>
 </div>
 <p>
