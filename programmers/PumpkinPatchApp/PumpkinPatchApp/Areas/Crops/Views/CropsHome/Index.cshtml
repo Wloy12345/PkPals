@@ -112,7 +112,10 @@
             To change the order of the table, click on the headers for easy sorting.
         </p>
     </div>
-    <input id="exButton" type="button" value="Export Table" onclick="myFunction();" class=" btn btn-outline-success">
+    @using (Html.BeginForm("ExportToCsv", "CropsHome", FormMethod.Post))
+    {
+        <button type="submit" class=" btn btn-outline-success">Export to CSV</button>
+    }
     <style>
         a {
             color: #165E45;
@@ -124,50 +127,6 @@
             $('#cropTable').DataTable(); // Initialize DataTables for your table (replace 'empTable' with your table ID)
         });
     </script>
-    <script>
-        document.getElementById("exButton").onclick = function () {
-          
-       
-        $("table").tableExport(
-           
-            // Displays table headers (th or td elements) in the <thead>
-            headers= true,
 
-            // Displays table footers (th or td elements) in the
-          
-            footers= true,
-
-            // Filetype(s) for the export
-            formats= ["xls", "csv", "txt"],
-
-            // Filename for the downloaded file
-            fileName= "id",
-
-            // Style buttons using bootstrap framework
-            bootstrap= false,
-
-            // Automatically generates the built-in export buttons for each of the specified formats
-            exportButtons= true,
-
-            // Position of the caption element relative to table
-            position= "bottom",
-
-            // (Number, Number[]), Row indices to exclude from the exported file(s)
-            ignoreRows= null,
-
-            // (Number, Number[]), column indices to exclude from the exported file(s)
-            ignoreCols= null,
-
-            // Removes all leading/trailing newlines, spaces, and tabs from cell text in the exported file(s)
-            trimWhitespace= false,
-
-            // (Boolean), set direction of the worksheet to right-to-left (default: false)
-            RTL= false,
-
-            // (id, String), sheet name for the exported spreadsheet, (default: 'id')
-            sheetname= "id"
-
-        )};
-    </script>
 </body>
 </html>

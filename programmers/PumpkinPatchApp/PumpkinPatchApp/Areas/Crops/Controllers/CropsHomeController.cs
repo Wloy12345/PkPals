@@ -5,6 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web;
+using System.Text;
 using System.Web.Mvc;
 using PK_EF;
 using iText.Kernel.Pdf;
@@ -130,13 +131,30 @@ namespace PumpkinPatchApp.Areas.Crops.Controllers
             base.Dispose(disposing);
         }
 
-        public ActionResult GeneratePDF()
+        public ActionResult ExportToCsv()
         {
-            // Retrieve table data (already populated)
-            var tableData = db.CROPs.ToList(); // Replace with your actual data retrieval logic
+            // Retrieve data from your model or database
+            var data = (db.CROPs.ToList()); // Replace with your actual data retrieval logic
 
-            // Provide the user with a link to download the PDF
-            return RedirectToAction("Index");
+            // Generate a CSV string (you can use StringBuilder or any other method)
+            var csvContent = GenerateCsvContent(data);
+
+            // Return the CSV file
+            return File(new System.Text.UTF8Encoding().GetBytes(csvContent), "text/csv", "yourcropdata.csv");
+
+
+        }
+        private string GenerateCsvContent(List<CROP> data)
+        {
+            var sb = new StringBuilder();
+            sb.AppendLine("ID,Name,Description,Type of Crop,Days Until Harvest,Season,Shelf Life,Market Value,Water Amount,Crop Rotation Recomondations,Harvest Techniques"); // Header row
+
+            foreach (var item in data)
+            {
+                sb.AppendLine($"{item.CropID},{item.Name},{item.Description},{item.Type}, {item.DaysTillHarvest}, {item.Season}, {item.ShelfLife}, {item.MarketValue}, {item.WaterAmount}, {item.CropRotationRecom}, {item.HarvestTechniques}");
+            }
+
+            return sb.ToString();
         }
 
 

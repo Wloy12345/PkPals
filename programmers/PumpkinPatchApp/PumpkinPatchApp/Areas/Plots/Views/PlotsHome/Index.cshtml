@@ -19,7 +19,7 @@
         <thead>
             <tr>
                 <th>
-                   @Html.DisplayNameFor(model => model.Name)
+                    @Html.DisplayNameFor(model => model.Name)
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Description)
@@ -47,7 +47,7 @@
             {
                 <tr>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Name) 
+                        @Html.DisplayFor(modelItem => item.Name)
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Description)
@@ -68,15 +68,22 @@
                         @Html.DisplayFor(modelItem => item.FARM.Name)
                     </td>
                     <td>
-                        
+
                         @Html.ActionLink("Details", "Details", new { id = item.PlotID })
-                      
+
                     </td>
                 </tr>
             }
         </tbody>
 
     </table>
+    <div style="text-align:center;">
+        <p>
+            To change the order of the table, click on the headers for easy sorting.
+        </p>
+    </div>
+
+    <button type="submit" class=" btn btn-outline-success">Export to CSV</button>
     <script>
         $(document).ready(function () {
             $('#plotTable').DataTable(); // Initialize DataTables for your table (replace 'empTable' with your table ID)
