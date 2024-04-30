@@ -259,6 +259,8 @@
     <Compile Include="Areas\InventoryItems\InventoryItemsAreaRegistration.cs" />
     <Compile Include="Areas\Plots\Controllers\PlotsHomeController.cs" />
     <Compile Include="Areas\Plots\PlotsAreaRegistration.cs" />
+    <Compile Include="Areas\Schedules\Controllers\ScheduleHomeController.cs" />
+    <Compile Include="Areas\Schedules\SchedulesAreaRegistration.cs" />
     <Compile Include="Areas\Supplies\Controllers\SupplyHomeController.cs" />
     <Compile Include="Areas\Supplies\SuppliesAreaRegistration.cs" />
     <Compile Include="Areas\SupplyCategoryItems\Controllers\SupplyCategoryHomeController.cs" />
@@ -389,6 +391,13 @@
     <Content Include="Areas\WaterStatusIndex\Views\WaterIndex\Details.cshtml" />
     <Content Include="Areas\WaterStatusIndex\Views\WaterIndex\Edit.cshtml" />
     <Content Include="Areas\WaterStatusIndex\Views\WaterIndex\Index.cshtml" />
+    <Content Include="Areas\Schedules\Views\web.config" />
+    <Content Include="Areas\Schedules\Views\Shared\_Menu.cshtml" />
+    <Content Include="Areas\Schedules\Views\ScheduleHome\Create.cshtml" />
+    <Content Include="Areas\Schedules\Views\ScheduleHome\Delete.cshtml" />
+    <Content Include="Areas\Schedules\Views\ScheduleHome\Details.cshtml" />
+    <Content Include="Areas\Schedules\Views\ScheduleHome\Edit.cshtml" />
+    <Content Include="Areas\Schedules\Views\ScheduleHome\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\dataTables.bootstrap5.js" />
     <Content Include="Scripts\dataTables.bootstrap5.min.js" />
@@ -450,6 +459,7 @@
     <Folder Include="Areas\InventoryItems\Data\" />
     <Folder Include="Areas\Plots\Data\" />
     <Folder Include="Areas\Plots\Views\Shared\" />
+    <Folder Include="Areas\Schedules\Data\" />
     <Folder Include="Areas\Supplies\Data\" />
     <Folder Include="Areas\SupplyCategoryItems\Data\" />
     <Folder Include="Areas\WaterStatusIndex\Data\" />
