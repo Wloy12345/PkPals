@@ -197,6 +197,7 @@
           <ScalarProperty Name="EquipmentID" ColumnName="EquipmentID" />
           <ScalarProperty Name="Time" ColumnName="Time" />
           <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

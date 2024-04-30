@@ -197,6 +197,7 @@
           <Property Name="EquipmentID" Type="int" Nullable="false" />
           <Property Name="Time" Type="datetime" Nullable="false" />
           <Property Name="IsApproved" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="EndTime" Type="datetime" />
         </EntityType>
         <EntityType Name="STATUS">
           <Key>
@@ -778,6 +779,7 @@
           <Property Name="EquipmentID" Type="Int32" Nullable="false" />
           <Property Name="Time" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="IsApproved" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EndTime" Type="DateTime" Precision="3" />
           <NavigationProperty Name="EMPLOYEE" Relationship="Self.FK_5" FromRole="SCHEDULE" ToRole="EMPLOYEE" />
           <NavigationProperty Name="EQUIPMENT" Relationship="Self.FK_6" FromRole="SCHEDULE" ToRole="EQUIPMENT" />
         </EntityType>
@@ -1323,6 +1325,7 @@
                 <ScalarProperty Name="EquipmentID" ColumnName="EquipmentID" />
                 <ScalarProperty Name="Time" ColumnName="Time" />
                 <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

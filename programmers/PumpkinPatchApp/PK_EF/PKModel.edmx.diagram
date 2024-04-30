@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="50715784b85b479d8bec333fe1e040c4" Name="Diagram1">
+      <Diagram DiagramId="069e339bcfa3416a849518ff7415e59f" Name="Diagram1">
         <EntityTypeShape EntityType="PKPalsModel.AspNetRoleClaim" Width="1.5" PointX="11" PointY="11.25" IsExpanded="true" />
         <EntityTypeShape EntityType="PKPalsModel.AspNetRole" Width="1.5" PointX="8.75" PointY="15.25" IsExpanded="true" />
         <EntityTypeShape EntityType="PKPalsModel.AspNetUserClaim" Width="1.5" PointX="13.25" PointY="13.875" IsExpanded="true" />
@@ -21,7 +21,7 @@
         <EntityTypeShape EntityType="PKPalsModel.FARM" Width="1.5" PointX="0.75" PointY="7" IsExpanded="true" />
         <EntityTypeShape EntityType="PKPalsModel.INVENTORY" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
         <EntityTypeShape EntityType="PKPalsModel.PLOT" Width="1.5" PointX="3" PointY="10.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="PKPalsModel.SCHEDULE" Width="1.5" PointX="8.25" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PKPalsModel.SCHEDULE" Width="1.5" PointX="8.25" PointY="7.25" IsExpanded="true" />
         <EntityTypeShape EntityType="PKPalsModel.STATUS" Width="1.5" PointX="3.75" PointY="1.625" IsExpanded="true" />
         <EntityTypeShape EntityType="PKPalsModel.SUPPLy" Width="1.5" PointX="0.75" PointY="3.25" IsExpanded="true" />
         <EntityTypeShape EntityType="PKPalsModel.USER_POSITION" Width="1.5" PointX="3.75" PointY="16.75" IsExpanded="true" />

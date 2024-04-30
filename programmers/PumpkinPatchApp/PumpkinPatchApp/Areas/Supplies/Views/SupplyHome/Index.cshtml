@@ -44,7 +44,9 @@
             {
                 <tr>
                     <td>
-                        @Html.ActionLink(item.Name, "Details", "SupplyHome", new { area = "Supplies", id = item.SuppliesID }, null)
+                        <a>
+                            @Html.ActionLink(item.Name, "Details", "SupplyHome", new { area = "Supplies", id = item.SuppliesID }, null)
+                        </a>
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Type)
@@ -68,6 +70,13 @@
             To change the order of the table, click on the headers for easy sorting.
         </p>
     </div>
+
+    <style>
+        a {
+            color: #165E45;
+            text-decoration: underline;
+        }
+    </style>
 
     <button type="submit" class=" btn btn-outline-success">Export to CSV</button>
     <script>
