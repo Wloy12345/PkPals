@@ -1,5 +1,6 @@
 ﻿@model IEnumerable<PK_EF.SCHEDULE>
 
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Areas/Schedules/Views/Shared/_Menu.cshtml";
@@ -41,13 +42,51 @@
 
             @foreach (var item in Model)
             {
-                <tr> 
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Time)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.EndTime)
-                    </td>
+
+                <tr>
+                    @{
+                        bool Red = false;
+                        bool RedValue(DateTime a, IEnumerable<PK_EF.SCHEDULE> b)
+                        {
+                            foreach (var c in b)
+                            {
+                                if (a > c.Time && a < c.EndTime)
+                                {
+                                    Red = true;
+                                }
+                            }
+                            return Red;
+                        } }
+                    @if (RedValue(item.Time, Model))
+                    {
+                        <td style="color:red; text-decoration:Underline;">
+                            @Html.DisplayFor(modelItem => item.Time)
+                        </td>
+                    }
+                    else
+                    {
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Time)
+                        </td>
+
+                    }
+                    @{
+                        Red = false;
+                    }
+
+                    @if (RedValue(item.EndTime, Model))
+                    {
+                        <td style="color:red; text-decoration:Underline;">
+                            @Html.DisplayFor(modelItem => item.EndTime)
+                        </td>
+                    }
+                    else
+                    {
+                        <td>
+                            @Html.DisplayFor(modelItem => item.EndTime)
+                        </td>
+
+                    }
                     <td>
                         @Html.DisplayFor(modelItem => item.IsApproved)
                     </td>

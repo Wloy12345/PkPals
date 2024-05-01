@@ -192,7 +192,7 @@
     <Property Name="EquipmentID" Type="int" Nullable="false" />
     <Property Name="Time" Type="datetime" Nullable="false" />
     <Property Name="IsApproved" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="EndTime" Type="datetime" />
+    <Property Name="EndTime" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityType Name="STATUS">
     <Key>
